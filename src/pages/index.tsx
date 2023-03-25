@@ -29,7 +29,7 @@ const renderIcons = (
     return (
       <div
         key={`${icon.name}-${i}`}
-        className='mr-8 flex flex-col items-center justify-center'
+        className='mr-8 flex flex-col items-center'
       >
         {/* <IconButton variant='light' icon={} /> */}
         <div
@@ -54,7 +54,9 @@ const renderIcons = (
             className={clsxm('')}
           />
         </div>
-        <div className='mt-4 mb-8 text-xs'>{icon.name}</div>
+        <div className='mt-4 mb-8 text-center text-xs '>
+          {capitalizeSplitString(icon.name)}
+        </div>
       </div>
     );
   });
@@ -88,6 +90,16 @@ function Container({ className, ...props }) {
       {...props}
     />
   );
+}
+
+function capitalizeSplitString(str) {
+  const splitStr = str.split('_');
+  const capitalizedStr = splitStr.map((word) => {
+    const firstLetter = word.charAt(0).toUpperCase();
+    const restOfWord = word.slice(1);
+    return firstLetter + restOfWord;
+  });
+  return capitalizedStr.join(' ');
 }
 
 const SearchBar = () => {
@@ -138,7 +150,7 @@ const SearchBar = () => {
 
 export default function HomePage() {
   const [selected, setSelected] = React.useState(icons[0]);
-  const [color, setColor] = React.useState('#e66465');
+  const [color, setColor] = React.useState('#000000');
 
   return (
     <Layout>
@@ -184,7 +196,7 @@ export default function HomePage() {
                     />
                   </div>
                   <div className='my-6 font-bold'>
-                    {selected.name.replace('_', ' ')}
+                    {capitalizeSplitString(selected.name)}
                   </div>
                   <div>
                     <div>

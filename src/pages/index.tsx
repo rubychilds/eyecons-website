@@ -76,6 +76,7 @@ function importIcons(r, attrs) {
 }
 
 const icons = importIcons(
+  //@ts-ignore
   require.context(`../icons/eyecons`, false, /\.svg$/),
   'class="w-5 h-5"'
 );

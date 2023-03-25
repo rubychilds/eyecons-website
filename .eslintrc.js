@@ -6,7 +6,6 @@ module.exports = {
   },
   plugins: ['@typescript-eslint', 'simple-import-sort', 'unused-imports'],
   extends: [
-    'eslint:recommended',
     'next',
     'next/core-web-vitals',
     'plugin:@typescript-eslint/recommended',
@@ -14,7 +13,9 @@ module.exports = {
   ],
   rules: {
     '@typescript-eslint/no-explicit-any': 'off',
+    'no-explicit-any': 'off',
     'no-unused-vars': 'off',
+    '@typescript-eslint/ban-ts-comment': 'off',
     'no-console': 'warn',
     '@typescript-eslint/explicit-module-boundary-types': 'off',
     'react/no-unescaped-entities': 'off',

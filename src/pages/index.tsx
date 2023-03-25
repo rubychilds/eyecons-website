@@ -21,7 +21,10 @@ import Seo from '@/components/Seo';
 // Before you begin editing, follow all comments with `STARTERCONF`,
 // to customize the default configuration.
 
-const renderIcons = (icons, setSelected) => {
+const renderIcons = (
+  icons: any[],
+  setSelected: { (value: any): void; (arg0: any): void }
+) => {
   return icons.map((icon, i) => {
     return (
       <div

@@ -102,6 +102,25 @@ function capitalizeSplitString(str) {
   return capitalizedStr.join(' ');
 }
 
+function DownloadSVGButton({ filename, svgContent }) {
+  const handleDownload = () => {
+    const svgBlob = new Blob([svgContent], { type: 'image/svg+xml' });
+    const svgUrl = URL.createObjectURL(svgBlob);
+    const downloadLink = document.createElement('a');
+    downloadLink.href = svgUrl;
+    downloadLink.download = filename;
+    document.body.appendChild(downloadLink);
+    downloadLink.click();
+    document.body.removeChild(downloadLink);
+  };
+
+  return (
+    <Button variant='primary' onClick={handleDownload}>
+      Download SVG
+    </Button>
+  );
+}
+
 const SearchBar = () => {
   const searchBarRef = React.useRef<any>();
   const searchInputRef = React.useRef<any>();
@@ -114,9 +133,9 @@ const SearchBar = () => {
       className='pointer-events-none sticky top-0 z-50 -mb-10 overflow-hidden pb-10 sm:-mb-11 sm:pb-11 md:-mb-12 md:pb-12'
     >
       <div className='relative'>
-        <div className='pointer-events-auto relative bg-white pb-4 shadow-[0_1px_3px_rgba(15,23,42,0.08)] sm:pb-0'>
+        <div className='pointer-events-auto relative bg-white pb-4 shadow-[0_1px_3px_rgba(15,23,42,0.08)] sm:pb-0 '>
           <Container className='flex flex-col sm:flex-row sm:items-center'>
-            <div className='relative flex-auto'>
+            <div className='relative flex-auto '>
               <input
                 ref={searchInputRef}
                 type='search'
@@ -210,7 +229,10 @@ export default function HomePage() {
                     </div>
                   </div>
                   <div className='mt-6'>
-                    <Button variant='primary'>Download</Button>
+                    <DownloadSVGButton
+                      filename={selected.name}
+                      svgContent={selected.svg}
+                    ></DownloadSVGButton>
                   </div>
                 </div>
               )}

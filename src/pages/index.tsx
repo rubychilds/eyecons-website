@@ -27,7 +27,7 @@ const renderIcons = (
   setSelected: { (value: any): void; (arg0: any): void }
 ) => {
   const filteredIcons = query
-    ? matchSorter(icons, query.replace(/\s+/, '-'), { keys: ['name', 'tags'] })
+    ? matchSorter(icons, query.replace(/\s+/, '_'), { keys: ['name', 'tags'] })
     : icons;
 
   return filteredIcons.map((icon, i) => {
@@ -75,8 +75,8 @@ function importIcons(r, attrs) {
     .map((fileName) => {
       const name = fileName.slice(2).replace(/\.svg$/, '');
       return {
-        name,
         tags: tags[name] ?? [],
+        name: name.replaceAll(' ', '_'),
         svg: r(fileName).default.replace('>', ` ${attrs}>`),
       };
     });
@@ -126,16 +126,15 @@ function DownloadSVGButton({ filename, svgContent }) {
   );
 }
 
-const SearchBar = () => {
+const SearchBar = ({ setQuery, query }) => {
   const searchBarRef = React.useRef<any>();
   const searchInputRef = React.useRef<any>();
-  const [query, setSearchQuery] = React.useState('');
 
   const searchIcon = icons.find((i) => i.name === 'magnifying_glass');
   return (
     <div
       ref={searchBarRef}
-      className='pointer-events-none sticky top-0 z-50 -mb-10 overflow-hidden pb-10 sm:-mb-11 sm:pb-11 md:-mb-12 md:pb-12'
+      className='pointer-events-none sticky top-0 z-50 -mb-10 mt-20 overflow-hidden pb-10 sm:-mb-11 sm:pb-11 md:-mb-12 md:pb-12'
     >
       <div className='relative'>
         <div className='pointer-events-auto relative bg-white pb-4 shadow-[0_1px_3px_rgba(15,23,42,0.08)] sm:pb-0 '>
@@ -145,7 +144,7 @@ const SearchBar = () => {
                 ref={searchInputRef}
                 type='search'
                 value={query}
-                onChange={(e) => setSearchQuery(e.target.value)}
+                onChange={(e) => setQuery(e.target.value)}
                 aria-label='Search'
                 placeholder='Search'
                 className='block w-full appearance-none rounded-lg border-0 bg-transparent py-6 pr-4 pl-9 text-base text-slate-900 transition placeholder:text-slate-400 focus:outline-none sm:text-[0.8125rem] sm:leading-6 [&::-webkit-search-decoration]:appearance-none [&::-webkit-search-cancel-button]:appearance-none [&::-webkit-search-results-button]:appearance-none [&::-webkit-search-results-decoration]:appearance-none'
@@ -155,13 +154,13 @@ const SearchBar = () => {
                   __html: searchIcon.svg
                     .replace(
                       'w-5',
-                      'pointer-events-none absolute inset-y-0 left-0 h-full w-6 fill-slate-500 transition'
+                      'pointer-events-none absolute inset-y-0 left-0 h-full w-6 fill-slate-500  bg-white transition'
                     )
-                    .replace('h-5', 'h-6'),
+                    .replace(),
                   // .replace('fill="none"', 'fill="currentColor"'),
                 }}
                 className={clsxm(
-                  'pointer-events-none absolute inset-y-0 left-0 h-full w-6 fill-slate-500 transition'
+                  'pointer-events-none absolute inset-y-0 left-0 h-full w-6 border-0 bg-white fill-slate-500 transition'
                 )}
               />
             </div>
@@ -175,6 +174,7 @@ const SearchBar = () => {
 export default function HomePage() {
   const [selected, setSelected] = React.useState(icons[0]);
   const [color, setColor] = React.useState('#000000');
+  const [query, setSearchQuery] = React.useState('');
 
   return (
     <Layout>
@@ -184,15 +184,15 @@ export default function HomePage() {
       <main>
         <section className='bg-white'>
           <div className='layout h flex min-h-screen flex-col'>
-            <h1 className='mt-4 text-5xl'>Simple and Beautiful Icons.</h1>
-            <p className='mt-6 text-4xl text-gray-800'>
+            <h1 className='mt-20 text-5xl'>Simple and Beautiful Icons.</h1>
+            <p className='mt-20 text-4xl text-gray-800'>
               A library of 15x15 icons extending the Radix icon library with
               over 150+ new icons.
             </p>
-            <SearchBar />
+            <SearchBar setQuery={setSearchQuery} query={query} />
             <div className='relative flex'>
               <div className='grid w-full max-w-[800px] grid-cols-[repeat(auto-fill,minmax(5rem,1fr))] gap-x-6 gap-y-4 pt-10 pb-16 sm:pt-11 md:pt-12'>
-                {renderIcons(icons, '', setSelected)}
+                {renderIcons(icons, query, setSelected)}
               </div>
               {selected && (
                 <div className='sticky top-12 mt-12 flex max-h-[500px] min-w-[275px] flex-col items-center rounded border border-gray-300 p-6'>

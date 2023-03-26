@@ -1,3 +1,5 @@
+import { faCopy } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { matchSorter } from 'match-sorter';
 import * as React from 'react';
 
@@ -126,6 +128,26 @@ function DownloadSVGButton({ filename, svgContent }) {
   );
 }
 
+function CopyBox({ text }) {
+  const [copySuccess, setCopySuccess] = React.useState(false);
+
+  function handleCopyClick() {
+    navigator.clipboard.writeText(text);
+    setCopySuccess(true);
+    setTimeout(() => setCopySuccess(false), 2000);
+  }
+
+  return (
+    <pre className='copy-box m-4 min-w-[228px] bg-gray-100 py-2 px-2'>
+      <div className='text'>{text}</div>
+      <button className='copy-button' onClick={handleCopyClick}>
+        <FontAwesomeIcon icon={faCopy} />
+      </button>
+      {copySuccess && <div className='copy-success'>Copied to clipboard!</div>}
+    </pre>
+  );
+}
+
 const SearchBar = ({ setQuery, query }) => {
   const searchBarRef = React.useRef<any>();
   const searchInputRef = React.useRef<any>();
@@ -195,7 +217,7 @@ export default function HomePage() {
                 {renderIcons(icons, query, setSelected)}
               </div>
               {selected && (
-                <div className='sticky top-12 mt-12 flex max-h-[500px] min-w-[275px] flex-col items-center rounded border border-gray-300 p-6'>
+                <div className='sticky top-12 mt-12 flex max-h-[540px] min-w-[275px] flex-col items-center rounded border border-gray-300 p-6'>
                   <div
                     className={clsxm(
                       'inline-flex items-center justify-center rounded font-medium',
@@ -232,6 +254,9 @@ export default function HomePage() {
                         value={color}
                       />
                     </div>
+                  </div>
+                  <div>
+                    <CopyBox text='Test' />
                   </div>
                   <div className='mt-6'>
                     <DownloadSVGButton

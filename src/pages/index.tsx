@@ -1,13 +1,13 @@
+import { matchSorter } from 'match-sorter';
 import * as React from 'react';
 
-// import { HiArrowLeft } from 'react-icons/hi';
 import clsxm from '@/lib/clsxm';
+
+import { tags } from '@/data/tags';
 
 import Button from '@/components/buttons/Button';
 import Layout from '@/components/layout/Layout';
 import Seo from '@/components/Seo';
-
-// import { ChevronUp } from '@/icons/eyecons/Icons';
 
 /**
  * SVGR Support
@@ -23,9 +23,14 @@ import Seo from '@/components/Seo';
 
 const renderIcons = (
   icons: any[],
+  query,
   setSelected: { (value: any): void; (arg0: any): void }
 ) => {
-  return icons.map((icon, i) => {
+  const filteredIcons = query
+    ? matchSorter(icons, query.replace(/\s+/, '-'), { keys: ['name', 'tags'] })
+    : icons;
+
+  return filteredIcons.map((icon, i) => {
     return (
       <div
         key={`${icon.name}-${i}`}
@@ -71,7 +76,7 @@ function importIcons(r, attrs) {
       const name = fileName.slice(2).replace(/\.svg$/, '');
       return {
         name,
-        // tags: tags[name] ?? [],
+        tags: tags[name] ?? [],
         svg: r(fileName).default.replace('>', ` ${attrs}>`),
       };
     });
@@ -187,7 +192,7 @@ export default function HomePage() {
             <SearchBar />
             <div className='relative flex'>
               <div className='grid w-full max-w-[800px] grid-cols-[repeat(auto-fill,minmax(5rem,1fr))] gap-x-6 gap-y-4 pt-10 pb-16 sm:pt-11 md:pt-12'>
-                {renderIcons(icons, setSelected)}
+                {renderIcons(icons, '', setSelected)}
               </div>
               {selected && (
                 <div className='sticky top-12 mt-12 flex max-h-[500px] min-w-[275px] flex-col items-center rounded border border-gray-300 p-6'>

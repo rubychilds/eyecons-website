@@ -1,122 +1,174 @@
-# Next.js + Tailwind CSS + TypeScript Starter and Boilerplate
+# Eyecons - The Icon Library by Ruby
 
 <div align="center">
-  <h2>🔋 ts-nextjs-tailwind-starter</h2>
-  <p>Next.js + Tailwind CSS + TypeScript starter packed with useful development features.</p>
-  <p>Made by <a href="https://theodorusclarence.com">Theodorus Clarence</a></p>
+  <h2>👁️ Eyecons</h2>
+  <p>A beautiful collection of 150+ simple icons extending the Radix icon library</p>
+  <p>Created by <a href="https://twitter.com/rubychilds">Ruby Childs</a></p>
 
-[![GitHub Repo stars](https://img.shields.io/github/stars/theodorusclarence/ts-nextjs-tailwind-starter)](https://github.com/theodorusclarence/ts-nextjs-tailwind-starter/stargazers)
-[![Depfu](https://badges.depfu.com/badges/fc6e730632ab9dacaf7df478a08684a7/overview.svg)](https://depfu.com/github/theodorusclarence/ts-nextjs-tailwind-starter?project_id=30160)
-[![Last Update](https://img.shields.io/badge/deps%20update-every%20sunday-blue.svg)](https://shields.io/)
+[![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/)
+[![Made with Next.js](https://img.shields.io/badge/Made%20with-Next.js-000000?style=flat&logo=next.js)](https://nextjs.org/)
+[![Styled with Tailwind CSS](https://img.shields.io/badge/Styled%20with-Tailwind%20CSS-38B2AC?style=flat&logo=tailwind-css)](https://tailwindcss.com/)
 
 </div>
 
-## Features
+## 🎯 About Eyecons
 
-This repository is 🔋 battery packed with:
+Eyecons is a comprehensive icon library that extends the popular Radix icon set with over 150 additional carefully crafted icons. Built with modern web technologies, it provides a seamless experience for developers and designers looking for high-quality, consistent icons.
 
-- ⚡️ Next.js 13
-- ⚛️ React 18
-- ✨ TypeScript
-- 💨 Tailwind CSS 3 — Configured with CSS Variables to extend the **primary** color
-- 💎 Pre-built Components — Components that will **automatically adapt** with your brand color, [check here for the demo](https://tsnext-tw.thcl.dev/components)
-- 🃏 Jest — Configured for unit testing
-- 📈 Absolute Import and Path Alias — Import components using `@/` prefix
-- 📏 ESLint — Find and fix problems in your code, also will **auto sort** your imports
-- 💖 Prettier — Format your code consistently
-- 🐶 Husky & Lint Staged — Run scripts on your staged files before they are committed
-- 🤖 Conventional Commit Lint — Make sure you & your teammates follow conventional commit
-- ⏰ Release Please — Generate your changelog by activating the `release-please` workflow
-- 👷 Github Actions — Lint your code on PR
-- 🚘 Automatic Branch and Issue Autolink — Branch will be automatically created on issue **assign**, and auto linked on PR
-- 🔥 Snippets — A collection of useful snippets
-- 👀 Default Open Graph — Awesome open graph generated using [og](https://github.com/theodorusclarence/og), fork it and deploy!
-- 🗺 Site Map — Automatically generate sitemap.xml
-- 📦 Expansion Pack — Easily install common libraries, additional components, and configs
+### ✨ Key Features
 
-See the 👉 [feature details and changelog](https://github.com/theodorusclarence/ts-nextjs-tailwind-starter/blob/main/CHANGELOG.md) 👈 for more.
+- **🎨 150+ Beautiful Icons** - Carefully designed 15x15 pixel icons
+- **🔍 Smart Search** - Instantly find icons with intelligent search
+- **🎨 Color Customization** - Real-time color picker for icon customization
+- **📱 Responsive Design** - Works perfectly on all devices
+- **⚡ Fast Performance** - Optimized for speed and accessibility
+- **📦 Easy Downloads** - One-click SVG downloads
+- **🏷️ Smart Tagging** - Icons are tagged for better discoverability
+- **🔒 AI-Protected** - Content protected from unauthorized AI scraping
 
-You can also check all of the **details and demos** on my blog post:
+## 🚀 Live Demo
 
-- [One-stop Starter to Maximize Efficiency on Next.js & Tailwind CSS Projects](https://theodorusclarence.com/blog/one-stop-starter)
+Visit [https://eyecons.vercel.app](https://eyecons.vercel.app) to explore the full icon library.
 
-## Getting Started
+## 🛠️ Built With
 
-### 1. Clone this template using one of the three ways:
+- **[Next.js 14](https://nextjs.org/)** - React framework for production
+- **[React 18](https://reactjs.org/)** - JavaScript library for building user interfaces
+- **[TypeScript](https://www.typescriptlang.org/)** - Type safety and better developer experience
+- **[Tailwind CSS 3](https://tailwindcss.com/)** - Utility-first CSS framework
+- **[GT-Flexa Font](https://fonts.google.com/)** - Custom typography for headers
+- **[Libre Franklin](https://fonts.google.com/specimen/Libre+Franklin)** - Clean typography for body text
+- **[FontAwesome](https://fontawesome.com/)** - Additional iconography
+- **[Match Sorter](https://github.com/kentcdodds/match-sorter)** - Intelligent search functionality
 
-1. Use this repository as template
+## 🎨 Icon Categories
 
-   **Disclosure:** by using this repository as a template, there will be an attribution on your repository.
+Our icons cover a wide range of categories:
 
-   I'll appreciate if you do, so this template can be known by others too 😄
+- **UI/UX Elements** - Common interface components
+- **Navigation** - Directional and menu icons
+- **Communication** - Social media and messaging icons
+- **Business** - Professional and corporate icons
+- **Technology** - Development and tech-related icons
+- **Design** - Creative and artistic icons
 
-   ![Use as template](https://user-images.githubusercontent.com/55318172/129183039-1a61e68d-dd90-4548-9489-7b3ccbb35810.png)
+## 🔧 Development Setup
 
-2. Using `create-next-app`
+### Prerequisites
+
+- Node.js 22.0.0 or higher
+- Yarn package manager
+
+### Installation
+
+1. **Clone the repository**
 
    ```bash
-   npx create-next-app -e https://github.com/theodorusclarence/ts-nextjs-tailwind-starter project-name
+   git clone https://github.com/rubychilds/eyecons.git
+   cd eyecons
    ```
 
-3. Using `degit`
+2. **Install dependencies**
 
    ```bash
-   npx degit theodorusclarence/ts-nextjs-tailwind-starter YOUR_APP_NAME
+   yarn install
    ```
 
-4. Deploy to Vercel
+3. **Run the development server**
 
-   [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https%3A%2F%2Fgithub.com%2Ftheodorusclarence%2Fts-nextjs-tailwind-starter)
+   ```bash
+   yarn dev
+   ```
 
-### 2. Install dependencies
+4. **Open in browser**
 
-It is encouraged to use **yarn** so the husky hooks can work properly.
+   Navigate to [http://localhost:3000](http://localhost:3000)
 
-```bash
-yarn install
+### Available Scripts
+
+- `yarn dev` - Start development server
+- `yarn build` - Build for production
+- `yarn start` - Start production server
+- `yarn lint` - Run ESLint
+- `yarn lint:fix` - Fix ESLint issues
+- `yarn typecheck` - Run TypeScript checks
+- `yarn test` - Run tests
+
+## 📁 Project Structure
+
+```
+eyecons/
+├── src/
+│   ├── components/          # Reusable React components
+│   ├── icons/eyecons/       # SVG icon files
+│   ├── pages/               # Next.js pages
+│   ├── styles/              # CSS and styling
+│   └── data/                # Icon metadata and tags
+├── public/
+│   ├── fonts/               # Custom font files
+│   ├── opengraph-home.png   # Social media preview
+│   ├── robots.txt           # Search engine directives
+│   └── sitemap.xml          # Site structure for SEO
+└── ...
 ```
 
-### 3. Run the development server
+## 🔍 SEO & Performance
 
-You can start the server using this command:
+Eyecons is built with SEO and performance in mind:
 
-```bash
-yarn dev
-```
+- **Comprehensive Meta Tags** - OpenGraph, Twitter Cards, and structured data
+- **Optimized Images** - Proper image sizing and alt text
+- **Fast Loading** - Optimized fonts and assets
+- **Mobile First** - Responsive design for all devices
+- **Search Engine Friendly** - Proper sitemap and robots.txt
+- **AI Content Protection** - Blocks unauthorized AI crawlers
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result. You can start editing the page by modifying `src/pages/index.tsx`.
+## 🤝 Contributing
 
-### 4. Change defaults
+We welcome contributions! Here's how you can help:
 
-There are some things you need to change including title, urls, favicons, etc.
+1. **Add New Icons** - Submit SVG icons following our design guidelines
+2. **Improve Search** - Enhance tagging and categorization
+3. **Fix Bugs** - Report and fix issues
+4. **Documentation** - Help improve our docs
 
-Find all comments with !STARTERCONF, then follow the guide.
+### Icon Guidelines
 
-Don't forget to change the package name in package.json
+- 15x15 pixel viewBox
+- Clean, minimal design
+- Consistent stroke width
+- Proper SVG optimization
+- Descriptive naming
 
-### 5. Commit Message Convention
+## 📄 License
 
-This starter is using [conventional commits](https://www.conventionalcommits.org/en/v1.0.0/), it is mandatory to use it to commit changes.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## Projects using ts-nextjs-tailwind-starter
+## 👤 Author
 
-<!--
-TEMPLATE
-- [sitename](https://sitelink.com) ([Source](https://github.com/githublink))
-- [sitename](https://sitelink.com)
--->
+**Ruby Childs**
 
-- [theodorusclarence.com](https://theodorusclarence.com) ([Source](https://github.com/theodorusclarence/theodorusclarence.com))
-- [Notiolink](https://notiolink.thcl.dev/) ([Source](https://github.com/theodorusclarence/notiolink))
+- Twitter: [@rubychilds](https://twitter.com/rubychilds)
+- GitHub: [@rubychilds](https://github.com/rubychilds)
 
-Are you using this starter? Please add your page (and repo) to the end of the list via a [Pull Request](https://github.com/theodorusclarence/ts-nextjs-tailwind-starter/edit/main/README.md). 😃
+## 🙏 Acknowledgments
 
-## Expansion Pack 📦
+- Built on the foundation of [Radix Icons](https://icons.radix-ui.com/)
+- Inspired by the open-source design community
+- Thanks to all contributors and users
 
-This starter is now equipped with an [expansion pack](https://github.com/theodorusclarence/expansion-pack).
+## 🌟 Show Your Support
 
-You can easily add expansion such as React Hook Form + Components, Storybook, and more just using a single command line.
+If you find Eyecons useful, please consider:
 
-https://user-images.githubusercontent.com/55318172/146631994-e1cac137-1664-4cfe-950b-a96decc1eaa6.mp4
+- ⭐ Starring the repository
+- 🐦 Sharing on Twitter
+- 🔗 Linking to [eyecons.vercel.app](https://eyecons.vercel.app)
+- 🤝 Contributing to the project
 
-Check out the [expansion pack repository](https://github.com/theodorusclarence/expansion-pack) for the commands
+---
+
+<div align="center">
+  <p>Made with ❤️ by Ruby Childs</p>
+  <p>© 2025 Eyecons. All rights reserved.</p>
+</div>

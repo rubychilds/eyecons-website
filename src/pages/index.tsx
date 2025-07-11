@@ -90,15 +90,6 @@ const icons = importIcons(
   'class="w-5 h-5"'
 );
 
-function Container({ className, ...props }) {
-  return (
-    <div
-      className={clsxm('mx-auto max-w-7xl px-4 sm:px-6 lg:px-8', className)}
-      {...props}
-    />
-  );
-}
-
 function capitalizeSplitString(str) {
   const splitStr = str.split('_');
   const capitalizedStr = splitStr.map((word) => {
@@ -160,7 +151,7 @@ const SearchBar = ({ setQuery, query }) => {
     >
       <div className='relative'>
         <div className='pointer-events-auto relative bg-white pb-4 shadow-[0_1px_3px_rgba(15,23,42,0.08)] sm:pb-0 '>
-          <Container className='flex flex-col sm:flex-row sm:items-center'>
+          <div className='layout flex flex-col sm:flex-row sm:items-center'>
             <div className='relative flex-auto '>
               <input
                 ref={searchInputRef}
@@ -186,7 +177,7 @@ const SearchBar = ({ setQuery, query }) => {
                 )}
               />
             </div>
-          </Container>
+          </div>
         </div>
       </div>
     </div>

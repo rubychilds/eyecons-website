@@ -1,7 +1,6 @@
 import { faCopy } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { matchSorter } from 'match-sorter';
-import Image from 'next/image';
 import * as React from 'react';
 
 import clsxm from '@/lib/clsxm';
@@ -207,15 +206,6 @@ export default function HomePage() {
       <main>
         <section className='bg-white'>
           <div className='layout h flex min-h-screen flex-col'>
-            <div className='mt-6'>
-              <Image
-                src='/Eyecons.png'
-                alt='Eyecons Logo'
-                width={100}
-                height={100}
-                priority
-              />
-            </div>
             <h1 className='mt-20 text-5xl'>Simple and Beautiful Icons.</h1>
             <p className='mt-20 text-4xl text-gray-800'>
               A library of 15x15 icons extending the Radix icon library with

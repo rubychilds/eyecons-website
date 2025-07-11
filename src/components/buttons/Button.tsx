@@ -10,8 +10,8 @@ const ButtonSize = ['sm', 'base'] as const;
 type ButtonProps = {
   isLoading?: boolean;
   isDarkBg?: boolean;
-  variant?: typeof ButtonVariant[number];
-  size?: typeof ButtonSize[number];
+  variant?: (typeof ButtonVariant)[number];
+  size?: (typeof ButtonSize)[number];
   leftIcon?: IconType;
   rightIcon?: IconType;
   leftIconClassName?: string;
@@ -44,7 +44,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
         type='button'
         disabled={disabled}
         className={clsxm(
-          'inline-flex items-center rounded font-medium',
+          'inline-flex items-center rounded-[10px] font-medium',
           'focus:outline-none focus-visible:ring focus-visible:ring-primary-500',
           'shadow-sm',
           'transition-colors duration-75',
@@ -100,7 +100,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
         {isLoading && (
           <div
             className={clsxm(
-              'absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2',
+              'absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2',
               {
                 'text-white': ['primary', 'dark'].includes(variant),
                 'text-black': ['light'].includes(variant),

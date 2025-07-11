@@ -1,6 +1,7 @@
 import { faCopy } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { matchSorter } from 'match-sorter';
+import Image from 'next/image';
 import * as React from 'react';
 
 import clsxm from '@/lib/clsxm';
@@ -45,7 +46,7 @@ const renderIcons = (
           }}
           className={clsxm(
             'cursor-pointer',
-            'inline-flex items-center justify-center rounded font-medium',
+            'inline-flex items-center justify-center rounded-[10px] font-medium',
             'focus:outline-none focus-visible:ring focus-visible:ring-primary-500',
             'shadow-sm',
             'transition-colors duration-75',
@@ -61,7 +62,7 @@ const renderIcons = (
             className={clsxm('')}
           />
         </div>
-        <div className='mt-4 mb-8 text-center text-xs '>
+        <div className='mb-8 mt-4 text-center text-xs '>
           {capitalizeSplitString(icon.name)}
         </div>
       </div>
@@ -138,8 +139,8 @@ function CopyBox({ text }) {
   }
 
   return (
-    <pre className='copy-box m-4 min-w-[228px] bg-gray-100 py-2 px-2'>
-      <div className='text'>{text}</div>
+    <pre className='copy-box w-full overflow-hidden bg-transparent px-2 py-2'>
+      <div className='text break-all'>{text}</div>
       <button className='copy-button' onClick={handleCopyClick}>
         <FontAwesomeIcon icon={faCopy} />
       </button>
@@ -169,7 +170,7 @@ const SearchBar = ({ setQuery, query }) => {
                 onChange={(e) => setQuery(e.target.value)}
                 aria-label='Search'
                 placeholder='Search'
-                className='block w-full appearance-none rounded-lg border-0 bg-transparent py-6 pr-4 pl-9 text-base text-slate-900 transition placeholder:text-slate-400 focus:outline-none sm:text-[0.8125rem] sm:leading-6 [&::-webkit-search-decoration]:appearance-none [&::-webkit-search-cancel-button]:appearance-none [&::-webkit-search-results-button]:appearance-none [&::-webkit-search-results-decoration]:appearance-none'
+                className='block w-full appearance-none rounded-[10px] border-0 bg-transparent py-6 pl-9 pr-4 text-2xl text-slate-900 outline-none placeholder:text-slate-400 focus:border-transparent focus:outline-none focus:ring-0 [&::-webkit-search-cancel-button]:appearance-none [&::-webkit-search-decoration]:appearance-none [&::-webkit-search-results-button]:appearance-none [&::-webkit-search-results-decoration]:appearance-none'
               />
               <span
                 dangerouslySetInnerHTML={{
@@ -206,6 +207,15 @@ export default function HomePage() {
       <main>
         <section className='bg-white'>
           <div className='layout h flex min-h-screen flex-col'>
+            <div className='mt-6'>
+              <Image
+                src='/Eyecons.png'
+                alt='Eyecons Logo'
+                width={100}
+                height={100}
+                priority
+              />
+            </div>
             <h1 className='mt-20 text-5xl'>Simple and Beautiful Icons.</h1>
             <p className='mt-20 text-4xl text-gray-800'>
               A library of 15x15 icons extending the Radix icon library with
@@ -213,14 +223,14 @@ export default function HomePage() {
             </p>
             <SearchBar setQuery={setSearchQuery} query={query} />
             <div className='relative flex'>
-              <div className='grid w-full max-w-[800px] grid-cols-[repeat(auto-fill,minmax(5rem,1fr))] gap-x-6 gap-y-4 pt-10 pb-16 sm:pt-11 md:pt-12'>
+              <div className='grid w-full max-w-[800px] grid-cols-[repeat(auto-fill,minmax(5rem,1fr))] gap-x-6 gap-y-4 pb-16 pt-10 sm:pt-11 md:pt-12'>
                 {renderIcons(icons, query, setSelected)}
               </div>
               {selected && (
-                <div className='sticky top-12 mt-12 flex max-h-[540px] min-w-[275px] flex-col items-center rounded border border-gray-300 p-6'>
+                <div className='sticky top-12 mt-12 flex max-h-[540px] min-w-[275px] flex-col items-center rounded-[10px] border border-gray-300 p-6'>
                   <div
                     className={clsxm(
-                      'inline-flex items-center justify-center rounded font-medium',
+                      'inline-flex items-center justify-center rounded-[10px] font-medium',
                       'focus:outline-none focus-visible:ring focus-visible:ring-primary-500',
                       'shadow-sm',
                       'transition-colors duration-75',
@@ -228,7 +238,8 @@ export default function HomePage() {
                       'bg-white text-gray-700',
                       'border border-gray-300',
                       'hover:bg-gray-100 hover:text-dark',
-                      'active:bg-white/80 disabled:bg-gray-200'
+                      'active:bg-white/80 disabled:bg-gray-200',
+                      'mb-6'
                     )}
                   >
                     <span
@@ -241,24 +252,33 @@ export default function HomePage() {
                       className={clsxm('h-12 w-12')}
                     />
                   </div>
-                  <div className='my-6 font-bold'>
+                  <div className='mb-6 w-full break-words text-center font-bold'>
                     {capitalizeSplitString(selected.name)}
                   </div>
-                  <div>
-                    <div>
+                  <div className='mb-6 w-full'>
+                    <div className='flex items-center gap-3 rounded-[10px] bg-[#F7F7F7] p-3'>
+                      <span className='flex-shrink-0 text-sm font-medium text-gray-700'>
+                        Color
+                      </span>
                       <input
                         type='color'
                         id='color'
                         name='color'
                         onChange={(e) => setColor(e.target.value)}
                         value={color}
+                        className='h-8 w-8 flex-shrink-0 cursor-pointer rounded-[10px] border-none'
                       />
+                      <span className='flex-shrink-0 font-mono text-sm text-gray-600'>
+                        {color.toUpperCase()}
+                      </span>
                     </div>
                   </div>
-                  <div>
-                    <CopyBox text='Test' />
+                  <div className='mb-6 w-full'>
+                    <div className='rounded-[10px] bg-[#F7F7F7] p-3'>
+                      <CopyBox text='Test' />
+                    </div>
                   </div>
-                  <div className='mt-6'>
+                  <div className='w-full'>
                     <DownloadSVGButton
                       filename={selected.name}
                       svgContent={selected.svg}

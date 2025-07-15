@@ -1,11 +1,17 @@
 # Eyecons - The Icon Library by Ruby
 
 <div align="center">
+  
+![Eyecons Cover](./public/Cover.png)
+
   <h2>👁️ Eyecons</h2>
-  <p>A beautiful collection of 150+ simple icons extending the Radix icon library</p>
+  <p>A beautiful collection of 450+ simple icons extending the Radix icon library</p>
   <p>Created by <a href="https://twitter.com/rubychilds">Ruby Childs</a></p>
 
+[![Website](https://img.shields.io/badge/Website-eyecons.rubychilds.com-4285F4?style=flat&logo=google-chrome&logoColor=white)](https://eyecons.rubychilds.com)
+[![Figma Community](https://img.shields.io/badge/Figma-Community%20File-F24E1E?style=flat&logo=figma&logoColor=white)](https://www.figma.com/community/file/1526760064955383920)
 [![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/)
+
 [![Made with Next.js](https://img.shields.io/badge/Made%20with-Next.js-000000?style=flat&logo=next.js)](https://nextjs.org/)
 [![Styled with Tailwind CSS](https://img.shields.io/badge/Styled%20with-Tailwind%20CSS-38B2AC?style=flat&logo=tailwind-css)](https://tailwindcss.com/)
 
@@ -13,11 +19,13 @@
 
 ## 🎯 About Eyecons
 
-Eyecons is a comprehensive icon library that extends the popular Radix icon set with over 150 additional carefully crafted icons. Built with modern web technologies, it provides a seamless experience for developers and designers looking for high-quality, consistent icons.
+Eyecons is a collection of 15×15 pixel-perfect icons designed to seamlessly extend the Radix icon library, adding over 450 new icons to cover a broader range of use cases.
+
+Created by Ruby out of a genuine love for Radix and a need for more variety, Eyecons brings consistent, thoughtful additions to help designers and developers fill in the gaps with confidence and clarity.
 
 ### ✨ Key Features
 
-- **🎨 150+ Beautiful Icons** - Carefully designed 15x15 pixel icons
+- **🎨 450+ Beautiful Icons** - Carefully designed 15x15 pixel icons
 - **🔍 Smart Search** - Instantly find icons with intelligent search
 - **🎨 Color Customization** - Real-time color picker for icon customization
 - **📱 Responsive Design** - Works perfectly on all devices
@@ -28,7 +36,9 @@ Eyecons is a comprehensive icon library that extends the popular Radix icon set 
 
 ## 🚀 Live Demo
 
-Visit [https://eyecons.vercel.app](https://eyecons.vercel.app) to explore the full icon library.
+Visit [https://eyecons.rubychilds.com](https://eyecons.rubychilds.com) to explore the full icon library.
+
+You can also check out the [Figma Community File](https://www.figma.com/community/file/1526760064955383920) to use these icons in your design projects.
 
 ## 🛠️ Built With
 
@@ -123,9 +133,11 @@ Eyecons is built with SEO and performance in mind:
 - **Search Engine Friendly** - Proper sitemap and robots.txt
 - **AI Content Protection** - Blocks unauthorized AI crawlers
 
-## 🤝 Contributing
+## 🤝 Want to Contribute?
 
-We welcome contributions! Here's how you can help:
+We'd love your help making Eyecons even more useful. If you have ideas for new icons or want to contribute your own designs, feel free to share! Whether it's a missing symbol or a unique use case, your input helps the library grow and stay relevant to everyone's needs.
+
+Here's how you can help:
 
 1. **Add New Icons** - Submit SVG icons following our design guidelines
 2. **Improve Search** - Enhance tagging and categorization
@@ -163,7 +175,7 @@ If you find Eyecons useful, please consider:
 
 - ⭐ Starring the repository
 - 🐦 Sharing on Twitter
-- 🔗 Linking to [eyecons.vercel.app](https://eyecons.vercel.app)
+- 🔗 Linking to [eyecons.rubychilds.com](https://eyecons.rubychilds.com)
 - 🤝 Contributing to the project
 
 ---

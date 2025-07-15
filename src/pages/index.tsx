@@ -76,9 +76,12 @@ function importIcons(r, attrs) {
     .filter((fileName) => fileName.startsWith('./'))
     .map((fileName) => {
       const name = fileName.slice(2).replace(/\.svg$/, '');
+      const normalizedName = name.replaceAll(' ', '_');
+      const tagData = tags[normalizedName];
       return {
-        tags: tags[name] ?? [],
-        name: name.replaceAll(' ', '_'),
+        tags: tagData?.tags ?? [],
+        new: tagData?.new ?? false,
+        name: normalizedName,
         svg: r(fileName).default.replace('>', ` ${attrs}>`),
       };
     });
@@ -143,7 +146,7 @@ const SearchBar = ({ setQuery, query }) => {
   const searchBarRef = React.useRef<any>();
   const searchInputRef = React.useRef<any>();
 
-  const searchIcon = icons.find((i) => i.name === 'magnifying_glass');
+  const searchIcon = icons.find((i) => i.name === 'Magnifying_Glass');
   return (
     <div
       ref={searchBarRef}
@@ -160,20 +163,18 @@ const SearchBar = ({ setQuery, query }) => {
                 onChange={(e) => setQuery(e.target.value)}
                 aria-label='Search'
                 placeholder='Search'
-                className='block w-full appearance-none rounded-[10px] border-0 bg-transparent py-6 pl-9 pr-4 text-2xl text-slate-900 outline-none placeholder:text-slate-400 focus:border-transparent focus:outline-none focus:ring-0 [&::-webkit-search-cancel-button]:appearance-none [&::-webkit-search-decoration]:appearance-none [&::-webkit-search-results-button]:appearance-none [&::-webkit-search-results-decoration]:appearance-none'
+                className='block w-full appearance-none rounded-[10px] border-0 bg-transparent py-6 pl-10 pr-4 text-2xl text-slate-900 outline-none placeholder:text-slate-400 focus:border-transparent focus:outline-none focus:ring-0 [&::-webkit-search-cancel-button]:appearance-none [&::-webkit-search-decoration]:appearance-none [&::-webkit-search-results-button]:appearance-none [&::-webkit-search-results-decoration]:appearance-none'
               />
               <span
                 dangerouslySetInnerHTML={{
-                  __html: searchIcon.svg
-                    .replace(
-                      'w-5',
-                      'pointer-events-none absolute inset-y-0 left-0 h-full w-6 fill-slate-500  bg-white transition'
-                    )
-                    .replace(),
-                  // .replace('fill="none"', 'fill="currentColor"'),
+                  __html:
+                    searchIcon?.svg
+                      ?.replace('width="15"', 'width="20"')
+                      ?.replace('height="15"', 'height="20"')
+                      ?.replace('fill="black"', 'fill="currentColor"') || '',
                 }}
                 className={clsxm(
-                  'pointer-events-none absolute inset-y-0 left-0 h-full w-6 border-0 bg-white fill-slate-500 transition'
+                  'pointer-events-none absolute inset-y-0 left-0 flex h-full w-8 items-center justify-center text-slate-400'
                 )}
               />
             </div>
@@ -189,6 +190,8 @@ export default function HomePage() {
   const [color, setColor] = React.useState('#000000');
   const [query, setSearchQuery] = React.useState('');
 
+  const figmaIcon = icons.find((i) => i.name === 'Figma_Logo');
+
   return (
     <Layout>
       {/* <Seo templateTitle='Home' /> */}
@@ -202,6 +205,28 @@ export default function HomePage() {
               A library of 15x15 icons extending the Radix icon library with
               over 150+ new icons.
             </p>
+            <div className='mt-12'>
+              <a
+                href='https://www.figma.com/community/file/1526760064955383920'
+                target='_blank'
+                rel='noopener noreferrer'
+                className='inline-flex items-center justify-center gap-3 rounded-lg bg-black px-8 py-4 text-lg font-medium text-white transition-colors hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-black focus:ring-offset-2'
+              >
+                {figmaIcon && (
+                  <span
+                    dangerouslySetInnerHTML={{
+                      __html:
+                        figmaIcon.svg
+                          ?.replace('width="15"', 'width="20"')
+                          ?.replace('height="15"', 'height="20"')
+                          ?.replace('fill="black"', 'fill="currentColor"') ||
+                        '',
+                    }}
+                  />
+                )}
+                View in Figma
+              </a>
+            </div>
             <SearchBar setQuery={setSearchQuery} query={query} />
             <div className='relative flex'>
               <div className='grid w-full max-w-[800px] grid-cols-[repeat(auto-fill,minmax(5rem,1fr))] gap-x-6 gap-y-4 pb-16 pt-10 sm:pt-11 md:pt-12'>

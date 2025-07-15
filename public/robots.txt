@@ -1,58 +1,9 @@
-# Allow search engines
+# *
 User-agent: *
 Allow: /
 
-# Block AI crawlers and scrapers
-User-agent: GPTBot
-Disallow: /
+# Host
+Host: https://tsnext-tw.thcl.dev
 
-User-agent: Google-Extended
-Disallow: /
-
-User-agent: CCBot
-Disallow: /
-
-User-agent: anthropic-ai
-Disallow: /
-
-User-agent: Claude-Web
-Disallow: /
-
-User-agent: ChatGPT-User
-Disallow: /
-
-User-agent: OpenAI-SearchBot
-Disallow: /
-
-User-agent: PerplexityBot
-Disallow: /
-
-User-agent: YouBot
-Disallow: /
-
-User-agent: Meta-ExternalAgent
-Disallow: /
-
-User-agent: FacebookBot
-Disallow: /
-
-User-agent: Omgilibot
-Disallow: /
-
-User-agent: Bytespider
-Disallow: /
-
-User-agent: Diffbot
-Disallow: /
-
-User-agent: ImagesiftBot
-Disallow: /
-
-User-agent: ia_archiver
-Disallow: /
-
-# Sitemap
-Sitemap: https://eyecons.vercel.app/sitemap.xml
-
-# Disallow crawling of API routes
-Disallow: /api/
+# Sitemaps
+Sitemap: https://tsnext-tw.thcl.dev/sitemap.xml

@@ -1037,4 +1037,1377 @@ export const tags = {
   wrench_screwdriver: ['options', 'settings', 'tool'],
   x_circle: ['cancel', 'close', 'delete', 'remove', 'stop'],
   x_mark: ['cancel', 'close', 'delete', 'remove', 'stop'],
+
+  // HIGH PRIORITY - Brand/Logo Icons
+  codesandbox_logo: {
+    new: false,
+    tags: ['codesandbox', 'logo', 'development', 'sandbox', 'code', 'online'],
+  },
+  discord_logo: {
+    new: false,
+    tags: ['discord', 'logo', 'chat', 'gaming', 'communication', 'voice'],
+  },
+  dribbble: {
+    new: false,
+    tags: ['dribbble', 'logo', 'design', 'portfolio', 'creative', 'showcase'],
+  },
+  facebook: {
+    new: false,
+    tags: ['facebook', 'logo', 'social', 'meta', 'network', 'share'],
+  },
+  github_logo: {
+    new: false,
+    tags: [
+      'github',
+      'logo',
+      'code',
+      'repository',
+      'git',
+      'development',
+      'open_source',
+    ],
+  },
+  google: {
+    new: false,
+    tags: ['google', 'logo', 'search', 'brand', 'tech', 'internet'],
+  },
+  instagram: {
+    new: false,
+    tags: ['instagram', 'logo', 'social', 'photo', 'image', 'share', 'camera'],
+  },
+  linkedin: {
+    new: false,
+    tags: ['linkedin', 'logo', 'professional', 'network', 'career', 'business'],
+  },
+  twitter_logo: {
+    new: false,
+    tags: ['twitter', 'logo', 'social', 'tweet', 'bird', 'microblog'],
+  },
+  framer_logo: {
+    new: false,
+    tags: ['framer', 'logo', 'design', 'prototype', 'animation', 'interactive'],
+  },
+  notion_logo: {
+    new: false,
+    tags: ['notion', 'logo', 'notes', 'workspace', 'productivity', 'docs'],
+  },
+  sketch_logo: {
+    new: false,
+    tags: ['sketch', 'logo', 'design', 'vector', 'ui', 'interface'],
+  },
+  vercel_logo: {
+    new: false,
+    tags: ['vercel', 'logo', 'deployment', 'hosting', 'frontend', 'nextjs'],
+  },
+
+  // HIGH PRIORITY - Interface Elements
+  dots_horizontal: {
+    new: false,
+    tags: ['dots', 'horizontal', 'menu', 'more', 'ellipsis', 'options'],
+  },
+  dots_vertical: {
+    new: false,
+    tags: ['dots', 'vertical', 'menu', 'more', 'kebab', 'options'],
+  },
+  hamburger_menu: {
+    new: false,
+    tags: ['hamburger', 'menu', 'navigation', 'mobile', 'sidebar', 'burger'],
+  },
+  input: {
+    new: false,
+    tags: ['input', 'field', 'form', 'text', 'textbox', 'entry'],
+  },
+  radiobutton: {
+    new: false,
+    tags: ['radio', 'button', 'selection', 'form', 'choice', 'option'],
+  },
+  switch: {
+    new: false,
+    tags: ['switch', 'toggle', 'setting', 'on_off', 'enable', 'disable'],
+  },
+  switch_off: {
+    new: false,
+    tags: ['switch', 'toggle', 'off', 'disabled', 'inactive'],
+  },
+  slider: {
+    new: false,
+    tags: ['slider', 'range', 'control', 'adjustment', 'value'],
+  },
+  slider_vertical: {
+    new: false,
+    tags: ['slider', 'vertical', 'range', 'control', 'adjustment'],
+  },
+  drag_handle_dots_1: {
+    new: false,
+    tags: ['drag', 'handle', 'dots', 'grip', 'move', 'reorder'],
+  },
+  drag_handle_dots_2: {
+    new: false,
+    tags: ['drag', 'handle', 'dots', 'grip', 'move', 'reorder'],
+  },
+  drag_handle_horizontal: {
+    new: false,
+    tags: ['drag', 'handle', 'horizontal', 'grip', 'move', 'resize'],
+  },
+  drag_handle_vertical: {
+    new: false,
+    tags: ['drag', 'handle', 'vertical', 'grip', 'move', 'resize'],
+  },
+  dropdown_menu: {
+    new: false,
+    tags: ['dropdown', 'menu', 'select', 'options', 'list'],
+  },
+
+  // HIGH PRIORITY - Navigation & Actions
+  external_link: {
+    new: false,
+    tags: ['external', 'link', 'new_window', 'open', 'outside', 'redirect'],
+  },
+  download: {
+    new: false,
+    tags: ['download', 'save', 'export', 'file', 'get'],
+  },
+  upload: {
+    new: false,
+    tags: ['upload', 'import', 'file', 'add', 'send'],
+  },
+  enter_full_screen: {
+    new: false,
+    tags: ['fullscreen', 'expand', 'maximize', 'enlarge', 'zoom'],
+  },
+  exit_full_screen: {
+    new: false,
+    tags: ['exit', 'fullscreen', 'minimize', 'shrink', 'window'],
+  },
+  enter: {
+    new: false,
+    tags: ['enter', 'return', 'submit', 'confirm', 'go'],
+  },
+  exit: {
+    new: false,
+    tags: ['exit', 'leave', 'quit', 'close', 'logout'],
+  },
+  move: {
+    new: false,
+    tags: ['move', 'drag', 'relocate', 'position', 'arrows'],
+  },
+  track_next: {
+    new: false,
+    tags: ['next', 'forward', 'skip', 'track', 'media'],
+  },
+  track_previous: {
+    new: false,
+    tags: ['previous', 'back', 'rewind', 'track', 'media'],
+  },
+
+  // Additional HIGH PRIORITY - More Brand/Logos
+  iconjar_logo: {
+    new: false,
+    tags: ['iconjar', 'logo', 'icon', 'manager', 'tool', 'design'],
+  },
+  modulz_logo: {
+    new: false,
+    tags: ['modulz', 'logo', 'design', 'system', 'components'],
+  },
+  stitches_logo: {
+    new: false,
+    tags: ['stitches', 'logo', 'css', 'styling', 'framework'],
+  },
+
+  // HIGH PRIORITY - More Interface Elements
+  hand: {
+    new: false,
+    tags: ['hand', 'grab', 'cursor', 'pointer', 'select', 'drag'],
+  },
+  gear: {
+    new: false,
+    tags: ['gear', 'settings', 'configuration', 'options', 'preferences'],
+  },
+  gear_false: {
+    new: false,
+    tags: ['gear', 'settings', 'disabled', 'inactive', 'off'],
+  },
+  gear_true: {
+    new: false,
+    tags: ['gear', 'settings', 'enabled', 'active', 'on'],
+  },
+  settings_slider_horizontal: {
+    new: false,
+    tags: ['settings', 'slider', 'horizontal', 'adjustment', 'control'],
+  },
+  settings_slider_vertical: {
+    new: false,
+    tags: ['settings', 'slider', 'vertical', 'adjustment', 'control'],
+  },
+
+  // HIGH PRIORITY - Navigation Links
+  link_1: {
+    new: false,
+    tags: ['link', 'connection', 'url', 'hyperlink', 'chain'],
+  },
+  link_2: {
+    new: false,
+    tags: ['link', 'connection', 'url', 'hyperlink', 'chain'],
+  },
+  link_break_1: {
+    new: false,
+    tags: ['link', 'break', 'broken', 'disconnect', 'unlink'],
+  },
+  link_break_2: {
+    new: false,
+    tags: ['link', 'break', 'broken', 'disconnect', 'unlink'],
+  },
+  link_none_1: {
+    new: false,
+    tags: ['link', 'none', 'no_link', 'unlinked', 'disabled'],
+  },
+  link_none_2: {
+    new: false,
+    tags: ['link', 'none', 'no_link', 'unlinked', 'disabled'],
+  },
+
+  // HIGH PRIORITY - Downloads/Media
+  download_2: {
+    new: false,
+    tags: ['download', 'save', 'export', 'file', 'get', 'arrow_down'],
+  },
+  download_3: {
+    new: false,
+    tags: ['download', 'save', 'export', 'file', 'get', 'arrow_down'],
+  },
+  video: {
+    new: false,
+    tags: ['video', 'movie', 'film', 'media', 'play', 'cinema'],
+  },
+
+  // HIGH PRIORITY - Additional Navigation
+  enter_2: {
+    new: false,
+    tags: ['enter', 'return', 'submit', 'confirm', 'go'],
+  },
+  rocket: {
+    new: false,
+    tags: ['rocket', 'launch', 'startup', 'fast', 'deploy', 'boost'],
+  },
+  notification: {
+    new: false,
+    tags: ['notification', 'alert', 'message', 'notice', 'bell'],
+  },
+
+  // GENERATED MISSING ICONS - 276 icons added
+  figma_logo: {
+    new: false,
+    tags: ['figma', 'logo', 'brand', 'design', 'tool'],
+  },
+  arrows_horizontal_scroll_point: {
+    new: false,
+    tags: [
+      'arrows',
+      'horizontal',
+      'scroll',
+      'point',
+      'navigation',
+      'direction',
+    ],
+  },
+  arrows_vertical_scroll_point: {
+    new: false,
+    tags: ['arrows', 'vertical', 'scroll', 'point', 'navigation', 'direction'],
+  },
+  box_model: {
+    new: false,
+    tags: ['box', 'model', 'css', 'layout', 'margin', 'padding', 'border'],
+  },
+  corner_bottom_right: {
+    new: false,
+    tags: ['corner', 'bottom', 'right', 'border', 'edge', 'frame'],
+  },
+  corner_top_left: {
+    new: false,
+    tags: ['corner', 'top', 'left', 'border', 'edge', 'frame'],
+  },
+  corner_top_right: {
+    new: false,
+    tags: ['corner', 'top', 'right', 'border', 'edge', 'frame'],
+  },
+  corners: {
+    new: false,
+    tags: ['corners', 'border', 'edge', 'frame', 'rounded'],
+  },
+  cursor_arrow: {
+    new: false,
+    tags: ['cursor', 'arrow', 'pointer', 'mouse', 'select'],
+  },
+  cursor_arrow_full: {
+    new: false,
+    tags: ['cursor', 'arrow', 'pointer', 'mouse', 'select', 'full'],
+  },
+  double_arrow_down: {
+    new: false,
+    tags: ['double', 'arrow', 'down', 'direction', 'navigation', 'expand'],
+  },
+  double_arrow_left: {
+    new: false,
+    tags: ['double', 'arrow', 'left', 'direction', 'navigation', 'expand'],
+  },
+  double_arrow_right: {
+    new: false,
+    tags: ['double', 'arrow', 'right', 'direction', 'navigation', 'expand'],
+  },
+  double_arrow_up: {
+    new: false,
+    tags: ['double', 'arrow', 'up', 'direction', 'navigation', 'expand'],
+  },
+  frame: {
+    new: false,
+    tags: ['frame', 'border', 'container', 'box', 'outline'],
+  },
+  grid: {
+    new: false,
+    tags: ['grid', 'layout', 'structure', 'table', 'rows', 'columns'],
+  },
+  layout: {
+    new: false,
+    tags: ['layout', 'design', 'structure', 'template', 'arrangement'],
+  },
+  layout1: {
+    new: false,
+    tags: ['layout', 'design', 'template', 'structure', 'arrangement'],
+  },
+  layout10: {
+    new: false,
+    tags: ['layout', 'design', 'template', 'structure', 'arrangement'],
+  },
+  layout2: {
+    new: false,
+    tags: ['layout', 'design', 'template', 'structure', 'arrangement'],
+  },
+  layout3: {
+    new: false,
+    tags: ['layout', 'design', 'template', 'structure', 'arrangement'],
+  },
+  layout4: {
+    new: false,
+    tags: ['layout', 'design', 'template', 'structure', 'arrangement'],
+  },
+  layout5: {
+    new: false,
+    tags: ['layout', 'design', 'template', 'structure', 'arrangement'],
+  },
+  layout6: {
+    new: false,
+    tags: ['layout', 'design', 'template', 'structure', 'arrangement'],
+  },
+  layout7: {
+    new: false,
+    tags: ['layout', 'design', 'template', 'structure', 'arrangement'],
+  },
+  layout8: {
+    new: false,
+    tags: ['layout', 'design', 'template', 'structure', 'arrangement'],
+  },
+  layout9: {
+    new: false,
+    tags: ['layout', 'design', 'template', 'structure', 'arrangement'],
+  },
+  layout9_1: {
+    new: false,
+    tags: ['layout', 'design', 'template', 'structure', 'arrangement'],
+  },
+  left_arrow_stop: {
+    new: false,
+    tags: ['left', 'arrow', 'stop', 'navigation', 'direction', 'boundary'],
+  },
+  letter_spacing: {
+    new: false,
+    tags: ['letter', 'spacing', 'typography', 'text', 'font', 'kerning'],
+  },
+  margin: {
+    new: false,
+    tags: ['margin', 'spacing', 'css', 'layout', 'padding'],
+  },
+  middle_align: {
+    new: false,
+    tags: ['middle', 'align', 'center', 'vertical', 'alignment'],
+  },
+  padding: {
+    new: false,
+    tags: ['padding', 'spacing', 'css', 'layout', 'margin'],
+  },
+  pilcrow: {
+    new: false,
+    tags: ['pilcrow', 'paragraph', 'text', 'typography', 'symbol'],
+  },
+  right_arrow_stop: {
+    new: false,
+    tags: ['right', 'arrow', 'stop', 'navigation', 'direction', 'boundary'],
+  },
+  row_spacing: {
+    new: false,
+    tags: ['row', 'spacing', 'layout', 'vertical', 'gap'],
+  },
+  rows: {
+    new: false,
+    tags: ['rows', 'layout', 'structure', 'table', 'grid'],
+  },
+  text_align_bottom: {
+    new: false,
+    tags: ['text', 'align', 'bottom', 'typography', 'vertical'],
+  },
+  text_align_center: {
+    new: false,
+    tags: ['text', 'align', 'center', 'typography', 'horizontal'],
+  },
+  text_align_justify: {
+    new: false,
+    tags: ['text', 'align', 'justify', 'typography', 'paragraph'],
+  },
+  text_align_left: {
+    new: false,
+    tags: ['text', 'align', 'left', 'typography', 'horizontal'],
+  },
+  text_align_middle: {
+    new: false,
+    tags: ['text', 'align', 'middle', 'typography', 'vertical'],
+  },
+  text_align_right: {
+    new: false,
+    tags: ['text', 'align', 'right', 'typography', 'horizontal'],
+  },
+  text_align_top: {
+    new: false,
+    tags: ['text', 'align', 'top', 'typography', 'vertical'],
+  },
+  thick_arrow_down: {
+    new: false,
+    tags: ['thick', 'arrow', 'down', 'direction', 'navigation', 'bold'],
+  },
+  thick_arrow_left: {
+    new: false,
+    tags: ['thick', 'arrow', 'left', 'direction', 'navigation', 'bold'],
+  },
+  thick_arrow_right: {
+    new: false,
+    tags: ['thick', 'arrow', 'right', 'direction', 'navigation', 'bold'],
+  },
+  thick_arrow_up: {
+    new: false,
+    tags: ['thick', 'arrow', 'up', 'direction', 'navigation', 'bold'],
+  },
+  transparency_grid: {
+    new: false,
+    tags: ['transparency', 'grid', 'background', 'checkerboard', 'alpha'],
+  },
+  two_column: {
+    new: false,
+    tags: ['two', 'column', 'layout', 'structure', 'columns'],
+  },
+  view_grid: {
+    new: false,
+    tags: ['view', 'grid', 'layout', 'display', 'mode'],
+  },
+  cursor_text: {
+    new: false,
+    tags: ['cursor', 'text', 'input', 'typing', 'edit'],
+  },
+  file_text: {
+    new: false,
+    tags: ['file', 'text', 'document', 'content', 'writing'],
+  },
+  font_bold: {
+    new: false,
+    tags: ['font', 'bold', 'typography', 'text', 'weight'],
+  },
+  font_family: {
+    new: false,
+    tags: ['font', 'family', 'typography', 'typeface', 'text'],
+  },
+  font_height: {
+    new: false,
+    tags: ['font', 'height', 'line', 'spacing', 'typography'],
+  },
+  font_italic: {
+    new: false,
+    tags: ['font', 'italic', 'typography', 'text', 'style'],
+  },
+  font_roman: {
+    new: false,
+    tags: ['font', 'roman', 'typography', 'text', 'style'],
+  },
+  font_size: {
+    new: false,
+    tags: ['font', 'size', 'typography', 'text', 'scale'],
+  },
+  font_style_1: {
+    new: false,
+    tags: ['font', 'style', 'typography', 'text', 'format'],
+  },
+  heading: {
+    new: false,
+    tags: ['heading', 'title', 'text', 'typography', 'header'],
+  },
+  interface_text: {
+    new: false,
+    tags: ['interface', 'text', 'ui', 'label', 'typography'],
+  },
+  letter_case_capitalize: {
+    new: false,
+    tags: ['letter', 'case', 'capitalize', 'text', 'typography'],
+  },
+  letter_case_lowercase: {
+    new: false,
+    tags: ['letter', 'case', 'lowercase', 'text', 'typography'],
+  },
+  letter_case_toggle: {
+    new: false,
+    tags: ['letter', 'case', 'toggle', 'text', 'typography'],
+  },
+  letter_case_uppercase: {
+    new: false,
+    tags: ['letter', 'case', 'uppercase', 'text', 'typography'],
+  },
+  line_height: {
+    new: false,
+    tags: ['line', 'height', 'spacing', 'typography', 'text'],
+  },
+  overline: {
+    new: false,
+    tags: ['overline', 'text', 'typography', 'decoration'],
+  },
+  paragraph: {
+    new: false,
+    tags: ['paragraph', 'text', 'typography', 'content'],
+  },
+  quote: {
+    new: false,
+    tags: ['quote', 'text', 'citation', 'blockquote', 'typography'],
+  },
+  strikethrough: {
+    new: false,
+    tags: ['strikethrough', 'text', 'typography', 'decoration', 'cross'],
+  },
+  text: {
+    new: false,
+    tags: ['text', 'typography', 'content', 'writing'],
+  },
+  text_none: {
+    new: false,
+    tags: ['text', 'none', 'empty', 'blank', 'no'],
+  },
+  underline: {
+    new: false,
+    tags: ['underline', 'text', 'typography', 'decoration'],
+  },
+  file: {
+    new: false,
+    tags: ['file', 'document', 'data', 'storage'],
+  },
+  file_minus: {
+    new: false,
+    tags: ['file', 'minus', 'remove', 'delete', 'document'],
+  },
+  file_plus: {
+    new: false,
+    tags: ['file', 'plus', 'add', 'new', 'create', 'document'],
+  },
+  file_secure: {
+    new: false,
+    tags: ['file', 'secure', 'lock', 'private', 'encrypted', 'protected'],
+  },
+  folder: {
+    new: false,
+    tags: ['folder', 'directory', 'storage', 'files', 'organize'],
+  },
+  folder_add: {
+    new: false,
+    tags: ['folder', 'add', 'new', 'create', 'directory'],
+  },
+  folder_remove: {
+    new: false,
+    tags: ['folder', 'remove', 'delete', 'directory'],
+  },
+  image: {
+    new: false,
+    tags: ['image', 'picture', 'photo', 'graphics', 'media'],
+  },
+  image_landscape: {
+    new: false,
+    tags: ['image', 'landscape', 'horizontal', 'photo', 'orientation'],
+  },
+  image_left: {
+    new: false,
+    tags: ['image', 'left', 'align', 'position', 'layout'],
+  },
+  image_portrait: {
+    new: false,
+    tags: ['image', 'portrait', 'vertical', 'photo', 'orientation'],
+  },
+  image_portrait_user: {
+    new: false,
+    tags: ['image', 'portrait', 'user', 'profile', 'avatar', 'person'],
+  },
+  image_right: {
+    new: false,
+    tags: ['image', 'right', 'align', 'position', 'layout'],
+  },
+  image_top: {
+    new: false,
+    tags: ['image', 'top', 'align', 'position', 'layout'],
+  },
+  multiple_documents: {
+    new: false,
+    tags: ['multiple', 'documents', 'files', 'stack', 'many'],
+  },
+  multiple_files: {
+    new: false,
+    tags: ['multiple', 'files', 'documents', 'stack', 'many'],
+  },
+  user_profile: {
+    new: false,
+    tags: ['user', 'profile', 'account', 'person', 'avatar', 'identity'],
+  },
+  intersect_dots: {
+    new: false,
+    tags: ['intersect', 'dots', 'overlap', 'intersection', 'geometry'],
+  },
+  intersect_dots_center: {
+    new: false,
+    tags: ['intersect', 'dots', 'center', 'overlap', 'intersection'],
+  },
+  person_remove: {
+    new: false,
+    tags: ['person', 'remove', 'delete', 'user', 'minus'],
+  },
+  dashboard: {
+    new: false,
+    tags: ['dashboard', 'analytics', 'metrics', 'overview', 'control'],
+  },
+  levels: {
+    new: false,
+    tags: ['levels', 'bars', 'volume', 'equalizer', 'adjustment'],
+  },
+  mixer_horizontal: {
+    new: false,
+    tags: ['mixer', 'horizontal', 'sliders', 'controls', 'audio'],
+  },
+  mixer_vertical: {
+    new: false,
+    tags: ['mixer', 'vertical', 'sliders', 'controls', 'audio'],
+  },
+  pie: {
+    new: false,
+    tags: ['pie', 'chart', 'data', 'analytics', 'circular'],
+  },
+  pie_chart: {
+    new: false,
+    tags: ['pie', 'chart', 'data', 'analytics', 'statistics'],
+  },
+  envelope_add: {
+    new: false,
+    tags: ['envelope', 'add', 'mail', 'email', 'message', 'new'],
+  },
+  envelope_closed: {
+    new: false,
+    tags: ['envelope', 'closed', 'mail', 'email', 'message', 'unread'],
+  },
+  envelope_delete: {
+    new: false,
+    tags: ['envelope', 'delete', 'mail', 'email', 'message', 'remove'],
+  },
+  envelope_locked: {
+    new: false,
+    tags: ['envelope', 'locked', 'mail', 'email', 'secure', 'private'],
+  },
+  envelope_opened: {
+    new: false,
+    tags: ['envelope', 'opened', 'mail', 'email', 'message', 'read'],
+  },
+  message: {
+    new: false,
+    tags: ['message', 'chat', 'communication', 'text', 'talk'],
+  },
+  message_writing: {
+    new: false,
+    tags: ['message', 'writing', 'chat', 'typing', 'compose'],
+  },
+  phone: {
+    new: false,
+    tags: ['phone', 'call', 'communication', 'mobile', 'contact'],
+  },
+  counter_clockwise_clock: {
+    new: false,
+    tags: ['counter', 'clockwise', 'clock', 'reverse', 'undo', 'time'],
+  },
+  cross_1: {
+    new: false,
+    tags: ['cross', 'close', 'cancel', 'x', 'remove'],
+  },
+  cross_2: {
+    new: false,
+    tags: ['cross', 'close', 'cancel', 'x', 'remove'],
+  },
+  crosshair_1: {
+    new: false,
+    tags: ['crosshair', 'target', 'aim', 'precision', 'center'],
+  },
+  crosshair_2: {
+    new: false,
+    tags: ['crosshair', 'target', 'aim', 'precision', 'center'],
+  },
+  danger_x: {
+    new: false,
+    tags: ['danger', 'x', 'warning', 'error', 'alert', 'critical'],
+  },
+  eye_closed: {
+    new: false,
+    tags: ['eye', 'closed', 'hidden', 'invisible', 'private', 'hide'],
+  },
+  eye_microscope: {
+    new: false,
+    tags: ['eye', 'microscope', 'examine', 'inspect', 'magnify'],
+  },
+  eye_none: {
+    new: false,
+    tags: ['eye', 'none', 'invisible', 'hidden', 'no', 'visibility'],
+  },
+  eye_open: {
+    new: false,
+    tags: ['eye', 'open', 'visible', 'show', 'view', 'see'],
+  },
+  info_circled: {
+    new: false,
+    tags: ['info', 'circled', 'information', 'help', 'about'],
+  },
+  lock_open_1: {
+    new: false,
+    tags: ['lock', 'open', 'unlock', 'security', 'access'],
+  },
+  lock_open_2: {
+    new: false,
+    tags: ['lock', 'open', 'unlock', 'security', 'access'],
+  },
+  lock_false: {
+    new: false,
+    tags: ['lock', 'false', 'unlocked', 'open', 'insecure'],
+  },
+  lock_true: {
+    new: false,
+    tags: ['lock', 'true', 'locked', 'secure', 'protected'],
+  },
+  person_eye: {
+    new: false,
+    tags: ['person', 'eye', 'view', 'watch', 'observe', 'see'],
+  },
+  person_lock: {
+    new: false,
+    tags: ['person', 'lock', 'secure', 'private', 'protected', 'user'],
+  },
+  private_project: {
+    new: false,
+    tags: ['private', 'project', 'secure', 'locked', 'restricted'],
+  },
+  question_mark: {
+    new: false,
+    tags: ['question', 'mark', 'help', 'unknown', 'info'],
+  },
+  question_mark_circled: {
+    new: false,
+    tags: ['question', 'mark', 'circled', 'help', 'info', 'support'],
+  },
+  rotate_counter_clockwise: {
+    new: false,
+    tags: ['rotate', 'counter', 'clockwise', 'reverse', 'undo', 'turn'],
+  },
+  setting_menu_circle: {
+    new: false,
+    tags: ['setting', 'menu', 'circle', 'options', 'configuration'],
+  },
+  setting_menu_square: {
+    new: false,
+    tags: ['setting', 'menu', 'square', 'options', 'configuration'],
+  },
+  countdown_timer: {
+    new: false,
+    tags: ['countdown', 'timer', 'time', 'clock', 'deadline'],
+  },
+  lap_timer: {
+    new: false,
+    tags: ['lap', 'timer', 'stopwatch', 'time', 'measurement'],
+  },
+  stopwatch: {
+    new: false,
+    tags: ['stopwatch', 'timer', 'time', 'measurement', 'clock'],
+  },
+  stopwatch_half: {
+    new: false,
+    tags: ['stopwatch', 'half', 'timer', 'time', 'partial'],
+  },
+  stopwatch_quarter: {
+    new: false,
+    tags: ['stopwatch', 'quarter', 'timer', 'time', 'partial'],
+  },
+  stopwatch_quarter_filled: {
+    new: false,
+    tags: ['stopwatch', 'quarter', 'filled', 'timer', 'time'],
+  },
+  timer: {
+    new: false,
+    tags: ['timer', 'time', 'clock', 'countdown', 'schedule'],
+  },
+  update: {
+    new: false,
+    tags: ['update', 'refresh', 'sync', 'reload', 'renew'],
+  },
+  crop: {
+    new: false,
+    tags: ['crop', 'trim', 'cut', 'resize', 'edit'],
+  },
+  flip_left: {
+    new: false,
+    tags: ['flip', 'left', 'mirror', 'reverse', 'horizontal'],
+  },
+  flip_right: {
+    new: false,
+    tags: ['flip', 'right', 'mirror', 'reverse', 'horizontal'],
+  },
+  magic_wand: {
+    new: false,
+    tags: ['magic', 'wand', 'tool', 'select', 'automatic'],
+  },
+  mask_off: {
+    new: false,
+    tags: ['mask', 'off', 'hide', 'overlay', 'disable'],
+  },
+  mask_on: {
+    new: false,
+    tags: ['mask', 'on', 'show', 'overlay', 'enable'],
+  },
+  opacity: {
+    new: false,
+    tags: ['opacity', 'transparency', 'alpha', 'visibility'],
+  },
+  shadow: {
+    new: false,
+    tags: ['shadow', 'effect', 'depth', 'layer'],
+  },
+  shadow_inner: {
+    new: false,
+    tags: ['shadow', 'inner', 'inset', 'effect', 'depth'],
+  },
+  shadow_none: {
+    new: false,
+    tags: ['shadow', 'none', 'no', 'effect', 'flat'],
+  },
+  shadow_outer: {
+    new: false,
+    tags: ['shadow', 'outer', 'drop', 'effect', 'depth'],
+  },
+  transform: {
+    new: false,
+    tags: ['transform', 'modify', 'change', 'edit', 'alter'],
+  },
+  zoom_in: {
+    new: false,
+    tags: ['zoom', 'in', 'magnify', 'enlarge', 'scale'],
+  },
+  zoom_out: {
+    new: false,
+    tags: ['zoom', 'out', 'reduce', 'shrink', 'scale'],
+  },
+  dot: {
+    new: false,
+    tags: ['dot', 'point', 'circle', 'small', 'marker'],
+  },
+  dot_filled: {
+    new: false,
+    tags: ['dot', 'filled', 'point', 'circle', 'solid'],
+  },
+  half_1: {
+    new: false,
+    tags: ['half', 'partial', 'divided', 'split'],
+  },
+  half_2: {
+    new: false,
+    tags: ['half', 'partial', 'divided', 'split'],
+  },
+  half_empty_left: {
+    new: false,
+    tags: ['half', 'empty', 'left', 'partial', 'hollow'],
+  },
+  half_empty_right: {
+    new: false,
+    tags: ['half', 'empty', 'right', 'partial', 'hollow'],
+  },
+  intersect: {
+    new: false,
+    tags: ['intersect', 'overlap', 'intersection', 'geometry'],
+  },
+  intersect_2: {
+    new: false,
+    tags: ['intersect', 'overlap', 'intersection', 'geometry'],
+  },
+  minus_circled: {
+    new: false,
+    tags: ['minus', 'circled', 'subtract', 'remove', 'negative'],
+  },
+  moon_half: {
+    new: false,
+    tags: ['moon', 'half', 'crescent', 'phase', 'partial'],
+  },
+  moon_half_full: {
+    new: false,
+    tags: ['moon', 'half', 'full', 'phase', 'gibbous'],
+  },
+  plus_circled: {
+    new: false,
+    tags: ['plus', 'circled', 'add', 'create', 'positive'],
+  },
+  ruler_square: {
+    new: false,
+    tags: ['ruler', 'square', 'measure', 'tool', 'angle'],
+  },
+  select_edit_surface_circle: {
+    new: false,
+    tags: ['select', 'edit', 'surface', 'circle', 'tool'],
+  },
+  select_edit_surface_square: {
+    new: false,
+    tags: ['select', 'edit', 'surface', 'square', 'tool'],
+  },
+  square: {
+    new: false,
+    tags: ['square', 'shape', 'geometry', 'rectangle'],
+  },
+  triangle_down: {
+    new: false,
+    tags: ['triangle', 'down', 'shape', 'direction', 'arrow'],
+  },
+  triangle_left: {
+    new: false,
+    tags: ['triangle', 'left', 'shape', 'direction', 'arrow'],
+  },
+  triangle_right: {
+    new: false,
+    tags: ['triangle', 'right', 'shape', 'direction', 'arrow'],
+  },
+  triangle_up: {
+    new: false,
+    tags: ['triangle', 'up', 'shape', 'direction', 'arrow'],
+  },
+  union: {
+    new: false,
+    tags: ['union', 'combine', 'merge', 'geometry', 'join'],
+  },
+  union_1: {
+    new: false,
+    tags: ['union', 'combine', 'merge', 'geometry', 'join'],
+  },
+  accessibility: {
+    new: false,
+    tags: ['accessibility', 'a11y', 'disabled', 'inclusive', 'universal'],
+  },
+  augmented_realty: {
+    new: false,
+    tags: ['augmented', 'reality', 'ar', 'virtual', 'technology'],
+  },
+  bookmarks: {
+    new: false,
+    tags: ['bookmarks', 'saved', 'favorites', 'collection', 'list'],
+  },
+  code_1: {
+    new: false,
+    tags: ['code', 'programming', 'development', 'script', 'syntax'],
+  },
+  component_3: {
+    new: false,
+    tags: ['component', 'element', 'part', 'module', 'ui'],
+  },
+  component_boolean: {
+    new: false,
+    tags: ['component', 'boolean', 'true', 'false', 'logic'],
+  },
+  component_placeholder: {
+    new: false,
+    tags: ['component', 'placeholder', 'empty', 'template', 'default'],
+  },
+  crumpled_paper: {
+    new: false,
+    tags: ['crumpled', 'paper', 'trash', 'waste', 'discard'],
+  },
+  dash: {
+    new: false,
+    tags: ['dash', 'line', 'hyphen', 'separator', 'minus'],
+  },
+  dimensions: {
+    new: false,
+    tags: ['dimensions', 'size', 'measurement', 'scale', 'ruler'],
+  },
+  disc: {
+    new: false,
+    tags: ['disc', 'circle', 'cd', 'dvd', 'media'],
+  },
+  divider_horizontal: {
+    new: false,
+    tags: ['divider', 'horizontal', 'separator', 'line', 'split'],
+  },
+  divider_vertical: {
+    new: false,
+    tags: ['divider', 'vertical', 'separator', 'line', 'split'],
+  },
+  drawing_pin: {
+    new: false,
+    tags: ['drawing', 'pin', 'attach', 'tack', 'mark'],
+  },
+  drawing_pin_filled: {
+    new: false,
+    tags: ['drawing', 'pin', 'filled', 'attach', 'tack', 'mark'],
+  },
+  edit_horizontal: {
+    new: false,
+    tags: ['edit', 'horizontal', 'modify', 'change', 'pencil'],
+  },
+  edit_horizontal_1: {
+    new: false,
+    tags: ['edit', 'horizontal', 'modify', 'change', 'pencil'],
+  },
+  face: {
+    new: false,
+    tags: ['face', 'person', 'user', 'avatar', 'profile'],
+  },
+  globe: {
+    new: false,
+    tags: ['globe', 'world', 'earth', 'international', 'global'],
+  },
+  group: {
+    new: false,
+    tags: ['group', 'collection', 'team', 'organize', 'cluster'],
+  },
+  height: {
+    new: false,
+    tags: ['height', 'vertical', 'size', 'dimension', 'measure'],
+  },
+  icons_unsave: {
+    new: false,
+    tags: ['icons', 'unsave', 'unsaved', 'draft', 'temporary'],
+  },
+  id_card: {
+    new: false,
+    tags: ['id', 'card', 'identity', 'badge', 'credential'],
+  },
+  layers: {
+    new: false,
+    tags: ['layers', 'stack', 'depth', 'levels', 'organize'],
+  },
+  left_join: {
+    new: false,
+    tags: ['left', 'join', 'merge', 'combine', 'connect'],
+  },
+  lightning_bolt: {
+    new: false,
+    tags: ['lightning', 'bolt', 'power', 'energy', 'electric'],
+  },
+  list_bullet: {
+    new: false,
+    tags: ['list', 'bullet', 'items', 'points', 'unordered'],
+  },
+  location: {
+    new: false,
+    tags: ['location', 'place', 'position', 'map', 'pin'],
+  },
+  loop: {
+    new: false,
+    tags: ['loop', 'repeat', 'cycle', 'circular', 'iterate'],
+  },
+  mix: {
+    new: false,
+    tags: ['mix', 'blend', 'combine', 'merge', 'mixture'],
+  },
+  mobile: {
+    new: false,
+    tags: ['mobile', 'phone', 'device', 'smartphone', 'portable'],
+  },
+  moon_empty: {
+    new: false,
+    tags: ['moon', 'empty', 'hollow', 'outline', 'night'],
+  },
+  moon_1: {
+    new: false,
+    tags: ['moon', 'night', 'phase', 'lunar', 'crescent'],
+  },
+  multiply: {
+    new: false,
+    tags: ['multiply', 'times', 'cross', 'calculate', 'math'],
+  },
+  network: {
+    new: false,
+    tags: ['network', 'connection', 'link', 'nodes', 'system'],
+  },
+  open_in_new_window: {
+    new: false,
+    tags: ['open', 'new', 'window', 'external', 'tab'],
+  },
+  paper_plane: {
+    new: false,
+    tags: ['paper', 'plane', 'send', 'message', 'travel'],
+  },
+  pause: {
+    new: false,
+    tags: ['pause', 'stop', 'halt', 'break', 'media'],
+  },
+  pencil_1: {
+    new: false,
+    tags: ['pencil', 'edit', 'write', 'draw', 'modify'],
+  },
+  pencil_2: {
+    new: false,
+    tags: ['pencil', 'edit', 'write', 'draw', 'modify'],
+  },
+  pencil_edit: {
+    new: false,
+    tags: ['pencil', 'edit', 'modify', 'change', 'write'],
+  },
+  pencil_edit_vertical: {
+    new: false,
+    tags: ['pencil', 'edit', 'vertical', 'modify', 'write'],
+  },
+  person: {
+    new: false,
+    tags: ['person', 'user', 'human', 'individual', 'profile'],
+  },
+  person_add: {
+    new: false,
+    tags: ['person', 'add', 'new', 'user', 'invite'],
+  },
+  person_edit: {
+    new: false,
+    tags: ['person', 'edit', 'modify', 'user', 'profile'],
+  },
+  person_verified: {
+    new: false,
+    tags: ['person', 'verified', 'check', 'approved', 'confirmed'],
+  },
+  pin_bottom: {
+    new: false,
+    tags: ['pin', 'bottom', 'attach', 'fix', 'position'],
+  },
+  pin_left: {
+    new: false,
+    tags: ['pin', 'left', 'attach', 'fix', 'position'],
+  },
+  pin_right: {
+    new: false,
+    tags: ['pin', 'right', 'attach', 'fix', 'position'],
+  },
+  pin_top: {
+    new: false,
+    tags: ['pin', 'top', 'attach', 'fix', 'position'],
+  },
+  play: {
+    new: false,
+    tags: ['play', 'start', 'run', 'media', 'begin'],
+  },
+  pocket: {
+    new: false,
+    tags: ['pocket', 'save', 'later', 'storage', 'bookmark'],
+  },
+  reader: {
+    new: false,
+    tags: ['reader', 'read', 'book', 'view', 'content'],
+  },
+  reload: {
+    new: false,
+    tags: ['reload', 'refresh', 'update', 'sync', 'renew'],
+  },
+  reset: {
+    new: false,
+    tags: ['reset', 'restart', 'clear', 'default', 'undo'],
+  },
+  resume: {
+    new: false,
+    tags: ['resume', 'continue', 'play', 'restart', 'proceed'],
+  },
+  ruler_horizontal: {
+    new: false,
+    tags: ['ruler', 'horizontal', 'measure', 'tool', 'scale'],
+  },
+  save: {
+    new: false,
+    tags: ['save', 'store', 'keep', 'preserve', 'disk'],
+  },
+  section: {
+    new: false,
+    tags: ['section', 'part', 'segment', 'division', 'area'],
+  },
+  selfie: {
+    new: false,
+    tags: ['selfie', 'camera', 'photo', 'self', 'portrait'],
+  },
+  sewing_pin: {
+    new: false,
+    tags: ['sewing', 'pin', 'needle', 'attach', 'fix'],
+  },
+  sewing_pin_filled: {
+    new: false,
+    tags: ['sewing', 'pin', 'filled', 'needle', 'attach'],
+  },
+  share_1: {
+    new: false,
+    tags: ['share', 'send', 'distribute', 'export', 'give'],
+  },
+  share_2: {
+    new: false,
+    tags: ['share', 'send', 'distribute', 'export', 'give'],
+  },
+  shrink_central: {
+    new: false,
+    tags: ['shrink', 'central', 'reduce', 'compress', 'center'],
+  },
+  shrink_central_diagonal: {
+    new: false,
+    tags: ['shrink', 'central', 'diagonal', 'reduce', 'compress'],
+  },
+  shrink_diagonal: {
+    new: false,
+    tags: ['shrink', 'diagonal', 'reduce', 'compress', 'corner'],
+  },
+  shrink_diagonal_2: {
+    new: false,
+    tags: ['shrink', 'diagonal', 'reduce', 'compress', 'corner'],
+  },
+  shrink_horizontal: {
+    new: false,
+    tags: ['shrink', 'horizontal', 'reduce', 'compress', 'width'],
+  },
+  shrink_vertical: {
+    new: false,
+    tags: ['shrink', 'vertical', 'reduce', 'compress', 'height'],
+  },
+  shuffle: {
+    new: false,
+    tags: ['shuffle', 'random', 'mix', 'reorder', 'change'],
+  },
+  size: {
+    new: false,
+    tags: ['size', 'dimension', 'scale', 'measure', 'extent'],
+  },
+  slash: {
+    new: false,
+    tags: ['slash', 'line', 'diagonal', 'divide', 'separator'],
+  },
+  sound_waves: {
+    new: false,
+    tags: ['sound', 'waves', 'audio', 'music', 'frequency'],
+  },
+  space_between_horizontally: {
+    new: false,
+    tags: ['space', 'between', 'horizontally', 'gap', 'distribute'],
+  },
+  space_between_vertically: {
+    new: false,
+    tags: ['space', 'between', 'vertically', 'gap', 'distribute'],
+  },
+  space_evenly_horizontally: {
+    new: false,
+    tags: ['space', 'evenly', 'horizontally', 'distribute', 'equal'],
+  },
+  space_evenly_vertically: {
+    new: false,
+    tags: ['space', 'evenly', 'vertically', 'distribute', 'equal'],
+  },
+  speaker_loud: {
+    new: false,
+    tags: ['speaker', 'loud', 'volume', 'audio', 'sound'],
+  },
+  speaker_moderate: {
+    new: false,
+    tags: ['speaker', 'moderate', 'volume', 'audio', 'sound'],
+  },
+  speaker_off: {
+    new: false,
+    tags: ['speaker', 'off', 'mute', 'silent', 'no', 'sound'],
+  },
+  speaker_quiet: {
+    new: false,
+    tags: ['speaker', 'quiet', 'low', 'volume', 'audio'],
+  },
+  stack: {
+    new: false,
+    tags: ['stack', 'pile', 'layers', 'collection', 'group'],
+  },
+  star_filled: {
+    new: false,
+    tags: ['star', 'filled', 'favorite', 'rating', 'solid'],
+  },
+  stop: {
+    new: false,
+    tags: ['stop', 'halt', 'end', 'pause', 'media'],
+  },
+  stretch_horizontally: {
+    new: false,
+    tags: ['stretch', 'horizontally', 'expand', 'extend', 'width'],
+  },
+  stretch_vertically: {
+    new: false,
+    tags: ['stretch', 'vertically', 'expand', 'extend', 'height'],
+  },
+  sum: {
+    new: false,
+    tags: ['sum', 'total', 'add', 'calculate', 'math'],
+  },
+  symbol: {
+    new: false,
+    tags: ['symbol', 'icon', 'sign', 'mark', 'character'],
+  },
+  table: {
+    new: false,
+    tags: ['table', 'grid', 'data', 'rows', 'columns'],
+  },
+  target: {
+    new: false,
+    tags: ['target', 'aim', 'goal', 'bullseye', 'focus'],
+  },
+  team: {
+    new: false,
+    tags: ['team', 'group', 'people', 'collaboration', 'users'],
+  },
+  tokens: {
+    new: false,
+    tags: ['tokens', 'elements', 'components', 'pieces', 'units'],
+  },
+  value: {
+    new: false,
+    tags: ['value', 'amount', 'number', 'data', 'content'],
+  },
+  value_none: {
+    new: false,
+    tags: ['value', 'none', 'empty', 'null', 'no'],
+  },
+  view_horizontal: {
+    new: false,
+    tags: ['view', 'horizontal', 'layout', 'display', 'orientation'],
+  },
+  view_none: {
+    new: false,
+    tags: ['view', 'none', 'hidden', 'invisible', 'no'],
+  },
+  view_vertical: {
+    new: false,
+    tags: ['view', 'vertical', 'layout', 'display', 'orientation'],
+  },
+  width: {
+    new: false,
+    tags: ['width', 'horizontal', 'size', 'dimension', 'measure'],
+  },
+  windows: {
+    new: false,
+    tags: ['windows', 'panels', 'panes', 'views', 'sections'],
+  },
+  workspace: {
+    new: false,
+    tags: ['workspace', 'area', 'environment', 'desk', 'office'],
+  },
+  shrink_verticle: {
+    new: false,
+    tags: ['shrink', 'vertical', 'reduce', 'compress', 'height'],
+  },
 };

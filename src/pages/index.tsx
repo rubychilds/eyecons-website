@@ -191,6 +191,7 @@ export default function HomePage() {
   const [query, setSearchQuery] = React.useState('');
 
   const figmaIcon = icons.find((i) => i.name === 'Figma_Logo');
+  const githubIcon = icons.find((i) => i.name === 'GitHub_Logo');
 
   return (
     <Layout>
@@ -205,12 +206,12 @@ export default function HomePage() {
               A library of 15x15 icons extending the Radix icon library with
               over 150+ new icons.
             </p>
-            <div className='mt-12'>
+            <div className='mt-12 flex gap-4'>
               <a
                 href='https://www.figma.com/community/file/1526760064955383920'
                 target='_blank'
                 rel='noopener noreferrer'
-                className='inline-flex items-center justify-center gap-3 rounded-lg bg-black px-8 py-4 text-lg font-medium text-white transition-colors hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-black focus:ring-offset-2'
+                className='inline-flex items-center justify-center gap-3 rounded-lg bg-black px-4 py-2 text-lg font-medium text-white transition-colors hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-black focus:ring-offset-2'
               >
                 {figmaIcon && (
                   <span
@@ -225,6 +226,26 @@ export default function HomePage() {
                   />
                 )}
                 View in Figma
+              </a>
+              <a
+                href='https://github.com/rubychilds/eyecons'
+                target='_blank'
+                rel='noopener noreferrer'
+                className='inline-flex items-center justify-center gap-3 rounded-lg border-2 border-black bg-white px-4 py-2 text-lg font-medium text-black transition-colors hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-black focus:ring-offset-2'
+              >
+                {githubIcon && (
+                  <span
+                    dangerouslySetInnerHTML={{
+                      __html:
+                        githubIcon.svg
+                          ?.replace('width="15"', 'width="20"')
+                          ?.replace('height="15"', 'height="20"')
+                          ?.replace('fill="black"', 'fill="currentColor"') ||
+                        '',
+                    }}
+                  />
+                )}
+                View on GitHub
               </a>
             </div>
             <SearchBar setQuery={setSearchQuery} query={query} />

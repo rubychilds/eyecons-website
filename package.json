@@ -2,6 +2,7 @@
   "name": "eyecons",
   "version": "0.1.0",
   "private": true,
+  "license": "MIT",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -24,7 +25,7 @@
     "raw-loader": "^4.0.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-icons": "^4.7.1",
+    "eyecons": "^0.0.1",
     "tailwind-merge": "^1.8.1"
   },
   "devDependencies": {

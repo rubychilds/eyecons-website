@@ -1,5 +1,3 @@
-# Eyecons - The Icon Library by Ruby
-
 <div align="center">
   
 ![Eyecons Cover](./public/Cover.png)

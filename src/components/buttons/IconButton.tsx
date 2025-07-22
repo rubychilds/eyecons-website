@@ -1,8 +1,8 @@
 import * as React from 'react';
 import { IconType } from 'react-icons';
-import { ImSpinner2 } from 'react-icons/im';
 
 import clsxm from '@/lib/clsxm';
+import { EyeSpinner } from '@/lib/eyecons';
 
 const IconButtonVariant = [
   'primary',
@@ -15,7 +15,7 @@ const IconButtonVariant = [
 type IconButtonProps = {
   isLoading?: boolean;
   isDarkBg?: boolean;
-  variant?: typeof IconButtonVariant[number];
+  variant?: (typeof IconButtonVariant)[number];
   icon?: IconType;
   iconClassName?: string;
 } & React.ComponentPropsWithRef<'button'>;
@@ -93,7 +93,7 @@ const IconButton = React.forwardRef<HTMLButtonElement, IconButtonProps>(
         {isLoading && (
           <div
             className={clsxm(
-              'absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2',
+              'absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2',
               {
                 'text-white': ['primary', 'dark'].includes(variant),
                 'text-black': ['light'].includes(variant),
@@ -101,7 +101,7 @@ const IconButton = React.forwardRef<HTMLButtonElement, IconButtonProps>(
               }
             )}
           >
-            <ImSpinner2 className='animate-spin' />
+            <EyeSpinner className='animate-spin' />
           </div>
         )}
         {Icon && <Icon className={clsxm(iconClassName)} />}

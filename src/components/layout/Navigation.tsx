@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { FaLinkedin } from 'react-icons/fa';
+
+import { EyeLinkedin } from '@/lib/eyecons';
 
 export default function Navigation() {
   return (
@@ -37,7 +38,7 @@ export default function Navigation() {
             rel='noopener noreferrer'
             className='text-gray-700 hover:text-gray-900'
           >
-            <FaLinkedin size={20} />
+            <EyeLinkedin size={20} />
           </Link>
         </div>
       </div>

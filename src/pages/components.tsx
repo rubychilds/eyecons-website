@@ -1,14 +1,15 @@
 // !STARTERCONF You can delete this page
 import clsx from 'clsx';
 import * as React from 'react';
+
 import {
-  HiArrowRight,
-  HiOutlineCreditCard,
-  HiOutlineDesktopComputer,
-  HiOutlineDeviceMobile,
-  HiOutlineShieldCheck,
-  HiPlus,
-} from 'react-icons/hi';
+  EyeArrowRight,
+  EyeCreditCard,
+  EyeDesktopComputer,
+  EyeDeviceMobile,
+  EyePlus,
+  EyeShieldCheck,
+} from '@/lib/eyecons';
 
 import Button from '@/components/buttons/Button';
 import IconButton from '@/components/buttons/IconButton';
@@ -23,7 +24,7 @@ import NextImage from '@/components/NextImage';
 import Seo from '@/components/Seo';
 import Skeleton from '@/components/Skeleton';
 
-type Color = typeof colorList[number];
+type Color = (typeof colorList)[number];
 
 export default function ComponentsPage() {
   const [mode, setMode] = React.useState<'dark' | 'light'>('light');
@@ -256,38 +257,38 @@ export default function ComponentsPage() {
                 <div className='flex flex-wrap gap-2'>
                   <Button
                     variant='primary'
-                    leftIcon={HiPlus}
-                    rightIcon={HiArrowRight}
+                    leftIcon={EyePlus}
+                    rightIcon={EyeArrowRight}
                   >
                     Icon
                   </Button>
                   <Button
                     variant='outline'
-                    leftIcon={HiPlus}
-                    rightIcon={HiArrowRight}
+                    leftIcon={EyePlus}
+                    rightIcon={EyeArrowRight}
                     isDarkBg={mode === 'dark'}
                   >
                     Icon
                   </Button>
                   <Button
                     variant='ghost'
-                    leftIcon={HiPlus}
-                    rightIcon={HiArrowRight}
+                    leftIcon={EyePlus}
+                    rightIcon={EyeArrowRight}
                     isDarkBg={mode === 'dark'}
                   >
                     Icon
                   </Button>
                   <Button
                     variant='dark'
-                    leftIcon={HiPlus}
-                    rightIcon={HiArrowRight}
+                    leftIcon={EyePlus}
+                    rightIcon={EyeArrowRight}
                   >
                     Icon
                   </Button>
                   <Button
                     variant='light'
-                    leftIcon={HiPlus}
-                    rightIcon={HiArrowRight}
+                    leftIcon={EyePlus}
+                    rightIcon={EyeArrowRight}
                   >
                     Icon
                   </Button>
@@ -317,16 +318,16 @@ export default function ComponentsPage() {
                   <Button
                     size='sm'
                     variant='primary'
-                    leftIcon={HiPlus}
-                    rightIcon={HiArrowRight}
+                    leftIcon={EyePlus}
+                    rightIcon={EyeArrowRight}
                   >
                     Icon
                   </Button>
                   <Button
                     size='sm'
                     variant='outline'
-                    leftIcon={HiPlus}
-                    rightIcon={HiArrowRight}
+                    leftIcon={EyePlus}
+                    rightIcon={EyeArrowRight}
                     isDarkBg={mode === 'dark'}
                   >
                     Icon
@@ -334,8 +335,8 @@ export default function ComponentsPage() {
                   <Button
                     size='sm'
                     variant='ghost'
-                    leftIcon={HiPlus}
-                    rightIcon={HiArrowRight}
+                    leftIcon={EyePlus}
+                    rightIcon={EyeArrowRight}
                     isDarkBg={mode === 'dark'}
                   >
                     Icon
@@ -344,16 +345,16 @@ export default function ComponentsPage() {
                   <Button
                     size='sm'
                     variant='dark'
-                    leftIcon={HiPlus}
-                    rightIcon={HiArrowRight}
+                    leftIcon={EyePlus}
+                    rightIcon={EyeArrowRight}
                   >
                     Icon
                   </Button>
                   <Button
                     size='sm'
                     variant='light'
-                    leftIcon={HiPlus}
-                    rightIcon={HiArrowRight}
+                    leftIcon={EyePlus}
+                    rightIcon={EyeArrowRight}
                   >
                     Icon
                   </Button>
@@ -414,14 +415,11 @@ export default function ComponentsPage() {
                   Button with only icon inside
                 </p>
                 <div className='space-x-2'>
-                  <IconButton icon={HiPlus} />
-                  <IconButton
-                    variant='outline'
-                    icon={HiOutlineDesktopComputer}
-                  />
-                  <IconButton variant='ghost' icon={HiOutlineDeviceMobile} />
-                  <IconButton variant='dark' icon={HiOutlineShieldCheck} />
-                  <IconButton variant='light' icon={HiOutlineCreditCard} />
+                  <IconButton icon={EyePlus} />
+                  <IconButton variant='outline' icon={EyeDesktopComputer} />
+                  <IconButton variant='ghost' icon={EyeDeviceMobile} />
+                  <IconButton variant='dark' icon={EyeShieldCheck} />
+                  <IconButton variant='light' icon={EyeCreditCard} />
                 </div>
               </li>
               <li className='space-y-2'>

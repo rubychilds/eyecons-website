@@ -1,5 +1,3 @@
-import { faCopy } from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { matchSorter } from 'match-sorter';
 import * as React from 'react';
 
@@ -124,6 +122,7 @@ function DownloadSVGButton({ filename, svgContent }) {
 
 function CopyBox({ text }) {
   const [copySuccess, setCopySuccess] = React.useState(false);
+  const copyIcon = icons.find((i) => i.name === 'Copy');
 
   function handleCopyClick() {
     navigator.clipboard.writeText(text);
@@ -135,7 +134,12 @@ function CopyBox({ text }) {
     <pre className='copy-box w-full overflow-hidden bg-transparent px-2 py-2'>
       <div className='text break-all'>{text}</div>
       <button className='copy-button' onClick={handleCopyClick}>
-        <FontAwesomeIcon icon={faCopy} />
+        {copyIcon && (
+          <span
+            dangerouslySetInnerHTML={{ __html: copyIcon.svg }}
+            className='inline-block'
+          />
+        )}
       </button>
       {copySuccess && <div className='copy-success'>Copied to clipboard!</div>}
     </pre>

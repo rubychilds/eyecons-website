@@ -1,6 +1,10 @@
 import * as EyeconsLibrary from 'eyecons-library';
 import * as React from 'react';
-import { IconType } from 'react-icons';
+
+// Define IconType locally since react-icons is not available
+export type IconType = React.ComponentType<
+  React.SVGProps<SVGSVGElement> & { size?: string | number }
+>;
 
 // Helper function to create IconType-compatible components from Eyecons
 export function createEyeconComponent(iconName: string): IconType {

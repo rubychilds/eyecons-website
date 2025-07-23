@@ -1,8 +1,7 @@
 import * as React from 'react';
-import { IconType } from 'react-icons';
 
 import clsxm from '@/lib/clsxm';
-import { EyeSpinner } from '@/lib/eyecons';
+import { EyeSpinner, IconType } from '@/lib/eyecons';
 
 const IconButtonVariant = [
   'primary',

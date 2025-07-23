@@ -1,7 +1,7 @@
 import * as React from 'react';
-import { IconType } from 'react-icons';
 
 import clsxm from '@/lib/clsxm';
+import { IconType } from '@/lib/eyecons';
 
 import UnstyledLink, {
   UnstyledLinkProps,

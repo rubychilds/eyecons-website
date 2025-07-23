@@ -1,58 +1,24 @@
+import * as EyeconsLibrary from 'eyecons-library';
 import * as React from 'react';
 import { IconType } from 'react-icons';
 
-// Import the same icons helper from the index page
-function importIcons(r: any, attrs: string) {
-  return r
-    .keys()
-    .filter((fileName: string) => fileName.startsWith('./'))
-    .map((fileName: string) => {
-      const name = fileName.slice(2).replace(/\.svg$/, '');
-      const normalizedName = name.replaceAll(' ', '_');
-      return {
-        name: normalizedName,
-        svg: r(fileName).default.replace('>', ` ${attrs}>`),
-      };
-    });
-}
-
-const icons = importIcons(
-  //@ts-ignore
-  require.context(`../icons/eyecons`, false, /\.svg$/),
-  'class="w-5 h-5"'
-);
-
 // Helper function to create IconType-compatible components from Eyecons
 export function createEyeconComponent(iconName: string): IconType {
-  const eyecon = icons.find((i) => i.name === iconName);
+  const IconComponent = (EyeconsLibrary as any)[iconName];
 
-  if (!eyecon) {
+  if (!IconComponent) {
     return () => null;
   }
 
-  const EyeconComponent: IconType = ({ className, ...props }) => {
-    // Extract size props if they exist
-    const { size, ...otherProps } = props as any;
-
+  const EyeconComponent: IconType = ({ className, size, ...props }) => {
     let finalClassName = className || 'w-5 h-5';
 
     // Handle size prop if provided
     if (size) {
-      finalClassName = `${className || ''} w-[${size}px] h-[${size}px]`.trim();
+      finalClassName = `w-[${size}px] h-[${size}px]`;
     }
 
-    return (
-      <span
-        {...otherProps}
-        className={finalClassName}
-        dangerouslySetInnerHTML={{
-          __html: eyecon.svg.replace(
-            'class="w-5 h-5"',
-            `class="${finalClassName}"`
-          ),
-        }}
-      />
-    );
+    return <IconComponent {...props} className={finalClassName} />;
   };
 
   return EyeconComponent;

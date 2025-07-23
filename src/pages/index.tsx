@@ -1,5 +1,7 @@
+import * as EyeconsLibrary from 'eyecons-library';
 import { matchSorter } from 'match-sorter';
 import * as React from 'react';
+import { renderToStaticMarkup } from 'react-dom/server';
 
 import clsxm from '@/lib/clsxm';
 
@@ -67,29 +69,23 @@ const renderIcons = (
   });
 };
 
-// From Heroicons.com
-function importIcons(r, attrs) {
-  return r
-    .keys()
-    .filter((fileName) => fileName.startsWith('./'))
-    .map((fileName) => {
-      const name = fileName.slice(2).replace(/\.svg$/, '');
-      const normalizedName = name.replaceAll(' ', '_');
-      const tagData = tags[normalizedName];
-      return {
-        tags: tagData?.tags ?? [],
-        new: tagData?.new ?? false,
-        name: normalizedName,
-        svg: r(fileName).default.replace('>', ` ${attrs}>`),
-      };
-    });
-}
+// Create icons array from eyecons-library
+const icons = Object.keys(EyeconsLibrary).map((iconName) => {
+  const tagData = tags[iconName];
+  const IconComponent = (EyeconsLibrary as any)[iconName];
 
-const icons = importIcons(
-  //@ts-ignore
-  require.context(`../icons/eyecons`, false, /\.svg$/),
-  'class="w-5 h-5"'
-);
+  // Create SVG string from component
+  const svgString = renderToStaticMarkup(
+    React.createElement(IconComponent, { className: 'w-5 h-5' })
+  );
+
+  return {
+    tags: tagData?.tags ?? [],
+    new: tagData?.new ?? false,
+    name: iconName,
+    svg: svgString,
+  };
+});
 
 function capitalizeSplitString(str) {
   const splitStr = str.split('_');

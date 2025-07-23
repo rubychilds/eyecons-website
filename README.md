@@ -38,6 +38,38 @@ Visit [https://eyecons.rubychilds.com](https://eyecons.rubychilds.com) to explor
 
 You can also check out the [Figma Community File](https://www.figma.com/community/file/1526760064955383920) to use these icons in your design projects.
 
+## 📦 Installation
+
+You can install the Eyecons library in your React projects using npm or yarn:
+
+### npm
+
+```bash
+npm install eyecons-library
+```
+
+### yarn
+
+```bash
+yarn add eyecons-library
+```
+
+### Usage
+
+```jsx
+import { Plus, ArrowRight, Heart } from 'eyecons-library';
+
+function MyComponent() {
+  return (
+    <div>
+      <Plus className='h-5 w-5' />
+      <ArrowRight className='h-5 w-5' />
+      <Heart className='h-5 w-5' />
+    </div>
+  );
+}
+```
+
 ## 🛠️ Built With
 
 - **[Next.js 14](https://nextjs.org/)** - React framework for production

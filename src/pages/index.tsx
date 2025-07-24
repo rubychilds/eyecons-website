@@ -247,6 +247,9 @@ export default function HomePage() {
                 )}
                 View on GitHub
               </a>
+              <div className='inline-flex items-center justify-center rounded-lg bg-[#e5e7eb] px-3 py-2 font-mono text-sm text-gray-700'>
+                npm i eyecons-library
+              </div>
             </div>
             <SearchBar setQuery={setSearchQuery} query={query} />
             <div className='relative flex'>
@@ -313,6 +316,22 @@ export default function HomePage() {
                   </div>
                 </div>
               )}
+            </div>
+            <div className='mt-16 text-center'>
+              <p className='text-gray-600'>
+                Made with ❤️ by{' '}
+                <a
+                  href='https://rubychilds.com'
+                  target='_blank'
+                  rel='noopener noreferrer'
+                  className='text-blue-600 hover:text-blue-800'
+                >
+                  Ruby Childs
+                </a>
+              </p>
+              <p className='text-sm text-gray-500'>
+                © 2025 Eyecons. All rights reserved.
+              </p>
             </div>
           </div>
         </section>

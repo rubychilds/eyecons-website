@@ -8,22 +8,20 @@ export default function Navigation() {
     <nav className='bg-white py-4'>
       <div className='layout flex items-center justify-between'>
         <div className='flex items-center'>
-          <Image
-            src='/Eyecons.png'
-            alt='Eyecons Logo'
-            width={100}
-            height={100}
-            priority
-          />
+          <Link href='/'>
+            <Image
+              src='/Eyecons.png'
+              alt='Eyecons Logo'
+              width={100}
+              height={100}
+              priority
+              className='cursor-pointer'
+            />
+          </Link>
         </div>
 
         <div className='flex items-center space-x-6'>
-          <Link
-            href='https://rubychilds.com/about'
-            target='_blank'
-            rel='noopener noreferrer'
-            className='text-gray-700 hover:text-gray-900'
-          >
+          <Link href='/about' className='text-gray-700 hover:text-gray-900'>
             About
           </Link>
           <Link

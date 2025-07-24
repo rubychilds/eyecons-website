@@ -354,7 +354,7 @@ export default function HomePage() {
                 </div>
               )}
             </div>
-            <div className='mt-16 text-center'>
+            <div className='mb-16 mt-16 text-center'>
               <p className='text-gray-600'>
                 Made with ❤️ by{' '}
                 <a

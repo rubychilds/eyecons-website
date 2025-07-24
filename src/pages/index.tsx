@@ -266,7 +266,7 @@ export default function HomePage() {
                 {renderIcons(icons, query, setSelected)}
               </div>
               {selected && (
-                <div className='sticky top-12 mt-12 flex max-h-[540px] w-[275px] flex-col items-center rounded-[10px] border border-gray-300 p-6'>
+                <div className='sticky top-12 mt-12 flex max-h-[720px] w-[275px] flex-col items-center rounded-[10px] border border-gray-300 p-6'>
                   <div
                     className={clsxm(
                       'inline-flex items-center justify-center rounded-[10px] font-medium',

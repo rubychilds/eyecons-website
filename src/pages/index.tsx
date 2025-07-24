@@ -149,6 +149,31 @@ function CopyBox({ text }) {
   );
 }
 
+function ClickToCopyBox({ text, className = '' }) {
+  const [copySuccess, setCopySuccess] = React.useState(false);
+
+  function handleCopyClick() {
+    navigator.clipboard.writeText(text);
+    setCopySuccess(true);
+    setTimeout(() => setCopySuccess(false), 1500);
+  }
+
+  return (
+    <div
+      onClick={handleCopyClick}
+      className={`relative cursor-pointer transition-colors hover:bg-gray-300 ${className}`}
+      title='Click to copy'
+    >
+      {text}
+      {copySuccess && (
+        <div className='absolute -top-8 left-1/2 -translate-x-1/2 transform whitespace-nowrap rounded bg-black px-2 py-1 text-xs text-white'>
+          Copied!
+        </div>
+      )}
+    </div>
+  );
+}
+
 const SearchBar = ({ setQuery, query }) => {
   const searchBarRef = React.useRef<any>();
   const searchInputRef = React.useRef<any>();
@@ -256,9 +281,10 @@ export default function HomePage() {
                 )}
                 View on GitHub
               </a>
-              <div className='inline-flex items-center justify-center rounded-lg bg-[#e5e7eb] px-3 py-2 font-mono text-sm text-gray-700'>
-                npm i eyecons-library
-              </div>
+              <ClickToCopyBox
+                text='npm i eyecons-library'
+                className='inline-flex items-center justify-center rounded-lg bg-[#e5e7eb] px-4 py-2 font-mono text-lg font-medium text-gray-700'
+              />
             </div>
             <SearchBar setQuery={setSearchQuery} query={query} />
             <div className='relative flex'>

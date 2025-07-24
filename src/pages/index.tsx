@@ -61,7 +61,7 @@ const renderIcons = (
             className={clsxm('')}
           />
         </div>
-        <div className='mb-8 mt-4 text-center text-xs '>
+        <div className='mb-8 mt-4 w-16 break-words text-center text-xs'>
           {capitalizeSplitString(icon.name)}
         </div>
       </div>
@@ -128,7 +128,7 @@ function CopyBox({ text }) {
 
   return (
     <pre className='copy-box w-full overflow-hidden bg-transparent px-2 py-2'>
-      <div className='text break-all'>{text}</div>
+      <div className='text whitespace-pre-wrap break-words'>{text}</div>
       <button className='copy-button' onClick={handleCopyClick}>
         {copyIcon && (
           <span
@@ -165,18 +165,20 @@ const SearchBar = ({ setQuery, query }) => {
                 placeholder='Search'
                 className='block w-full appearance-none rounded-[10px] border-0 bg-transparent py-6 pl-10 pr-4 text-2xl text-slate-900 outline-none placeholder:text-slate-400 focus:border-transparent focus:outline-none focus:ring-0 [&::-webkit-search-cancel-button]:appearance-none [&::-webkit-search-decoration]:appearance-none [&::-webkit-search-results-button]:appearance-none [&::-webkit-search-results-decoration]:appearance-none'
               />
-              <span
-                dangerouslySetInnerHTML={{
-                  __html:
-                    searchIcon?.svg
-                      ?.replace('width="15"', 'width="20"')
-                      ?.replace('height="15"', 'height="20"')
-                      ?.replace('fill="black"', 'fill="currentColor"') || '',
-                }}
-                className={clsxm(
-                  'pointer-events-none absolute inset-y-0 left-0 flex h-full w-8 items-center justify-center text-slate-400'
-                )}
-              />
+              {searchIcon && (
+                <span
+                  dangerouslySetInnerHTML={{
+                    __html:
+                      searchIcon.svg
+                        ?.replace('width="15"', 'width="20"')
+                        ?.replace('height="15"', 'height="20"')
+                        ?.replace('fill="black"', 'fill="currentColor"') || '',
+                  }}
+                  className={clsxm(
+                    'pointer-events-none absolute inset-y-0 left-0 flex h-full w-8 items-center justify-center text-slate-400'
+                  )}
+                />
+              )}
             </div>
           </div>
         </div>
@@ -257,7 +259,7 @@ export default function HomePage() {
                 {renderIcons(icons, query, setSelected)}
               </div>
               {selected && (
-                <div className='sticky top-12 mt-12 flex max-h-[540px] min-w-[275px] flex-col items-center rounded-[10px] border border-gray-300 p-6'>
+                <div className='sticky top-12 mt-12 flex max-h-[540px] w-[275px] flex-col items-center rounded-[10px] border border-gray-300 p-6'>
                   <div
                     className={clsxm(
                       'inline-flex items-center justify-center rounded-[10px] font-medium',
@@ -305,7 +307,9 @@ export default function HomePage() {
                   </div>
                   <div className='mb-6 w-full'>
                     <div className='rounded-[10px] bg-[#F7F7F7] p-3'>
-                      <CopyBox text='Test' />
+                      <CopyBox
+                        text={`npm install eyecons-library\nimport { ${selected.name} } from "eyecons-library"`}
+                      />
                     </div>
                   </div>
                   <div className='w-full'>

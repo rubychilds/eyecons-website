@@ -87,11 +87,18 @@ const icons = Object.keys(EyeconsLibrary).map((iconName) => {
   };
 });
 
-function capitalizeSplitString(str) {
-  const splitStr = str.split('_');
-  const capitalizedStr = splitStr.map((word) => {
+function capitalizeSplitString(str: string): string {
+  // Handle both camelCase and underscore-separated strings
+  const splitStr = str
+    .replace(/([A-Z])/g, ' $1') // Split camelCase
+    .replace(/_/g, ' ') // Replace underscores with spaces
+    .trim()
+    .split(/\s+/) // Split on any whitespace
+    .filter((word: string) => word.length > 0);
+
+  const capitalizedStr = splitStr.map((word: string) => {
     const firstLetter = word.charAt(0).toUpperCase();
-    const restOfWord = word.slice(1);
+    const restOfWord = word.slice(1).toLowerCase();
     return firstLetter + restOfWord;
   });
   return capitalizedStr.join(' ');
@@ -146,7 +153,7 @@ const SearchBar = ({ setQuery, query }) => {
   const searchBarRef = React.useRef<any>();
   const searchInputRef = React.useRef<any>();
 
-  const searchIcon = icons.find((i) => i.name === 'Magnifying_Glass');
+  const searchIcon = icons.find((i) => i.name === 'MagnifyingGlass');
   return (
     <div
       ref={searchBarRef}

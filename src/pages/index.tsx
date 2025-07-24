@@ -240,7 +240,7 @@ export default function HomePage() {
               A library of 15x15 icons extending the Radix icon library with
               over 150+ new icons.
             </p>
-            <div className='mt-12 flex gap-4'>
+            <div className='mt-12 flex flex-col gap-4 sm:flex-row'>
               <a
                 href='https://www.figma.com/community/file/1526760064955383920'
                 target='_blank'

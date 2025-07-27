@@ -5,15 +5,15 @@ import { EyeLinkedin } from '@/lib/eyecons';
 
 export default function Navigation() {
   return (
-    <nav className='bg-white py-4'>
+    <nav className='bg-transparent py-4'>
       <div className='layout flex items-center justify-between'>
         <div className='flex items-center'>
           <Link href='/'>
             <Image
               src='/Eyecons.png'
               alt='Eyecons Logo'
-              width={100}
-              height={100}
+              width={154}
+              height={53}
               priority
               className='cursor-pointer'
             />

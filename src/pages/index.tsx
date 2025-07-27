@@ -8,7 +8,7 @@ import clsxm from '@/lib/clsxm';
 import { tags } from '@/data/tags';
 
 import Button from '@/components/buttons/Button';
-import Layout from '@/components/layout/Layout';
+import Navigation from '@/components/layout/Navigation';
 import Seo from '@/components/Seo';
 
 /**
@@ -175,47 +175,69 @@ function ClickToCopyBox({ text, className = '' }) {
 }
 
 const SearchBar = ({ setQuery, query }) => {
-  const searchBarRef = React.useRef<any>();
+  const sentinelRef = React.useRef<any>();
   const searchInputRef = React.useRef<any>();
+  const [isSticky, setIsSticky] = React.useState(false);
+
+  React.useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setIsSticky(!entry.isIntersecting);
+      },
+      { threshold: 0 }
+    );
+
+    if (sentinelRef.current) {
+      observer.observe(sentinelRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, []);
 
   const searchIcon = icons.find((i) => i.name === 'MagnifyingGlass');
   return (
-    <div
-      ref={searchBarRef}
-      className='pointer-events-none sticky top-0 z-50 -mb-10 mt-20 overflow-hidden pb-10 sm:-mb-11 sm:pb-11 md:-mb-12 md:pb-12'
-    >
-      <div className='relative'>
-        <div className='pointer-events-auto relative bg-white pb-4 shadow-[0_1px_3px_rgba(15,23,42,0.08)] sm:pb-0 '>
-          <div className='layout flex flex-col sm:flex-row sm:items-center'>
-            <div className='relative flex-auto '>
-              <input
-                ref={searchInputRef}
-                type='search'
-                value={query}
-                onChange={(e) => setQuery(e.target.value)}
-                aria-label='Search'
-                placeholder='Search'
-                className='block w-full appearance-none rounded-[10px] border-0 bg-transparent py-6 pl-10 pr-4 text-2xl text-slate-900 outline-none placeholder:text-slate-400 focus:border-transparent focus:outline-none focus:ring-0 [&::-webkit-search-cancel-button]:appearance-none [&::-webkit-search-decoration]:appearance-none [&::-webkit-search-results-button]:appearance-none [&::-webkit-search-results-decoration]:appearance-none'
-              />
-              {searchIcon && (
-                <span
-                  dangerouslySetInnerHTML={{
-                    __html:
-                      searchIcon.svg
-                        ?.replace('width="15"', 'width="20"')
-                        ?.replace('height="15"', 'height="20"')
-                        ?.replace('fill="black"', 'fill="currentColor"') || '',
-                  }}
-                  className={clsxm(
-                    'pointer-events-none absolute inset-y-0 left-0 flex h-full w-8 items-center justify-center text-slate-400'
-                  )}
+    <>
+      <div ref={sentinelRef} className='h-0' />
+      <div className='pointer-events-none sticky top-0 z-50 -mb-10 mt-20 overflow-hidden pb-10 sm:-mb-11 sm:pb-11 md:-mb-12 md:pb-12'>
+        <div className='relative'>
+          <div
+            className={clsxm(
+              'pointer-events-auto relative pb-4 transition-colors duration-300 sm:pb-0',
+              isSticky ? 'bg-white shadow-md' : 'bg-transparent'
+            )}
+          >
+            <div className='layout flex flex-col sm:flex-row sm:items-center'>
+              <div className='relative flex-auto '>
+                <input
+                  ref={searchInputRef}
+                  type='search'
+                  value={query}
+                  onChange={(e) => setQuery(e.target.value)}
+                  aria-label='Search'
+                  placeholder='Search'
+                  className='block w-full appearance-none border-0 border-b-2 border-gray-300 bg-transparent py-6 pl-10 pr-4 text-2xl text-gray-800 outline-none placeholder:text-gray-500 focus:border-b-gray-600 focus:outline-none focus:ring-0 [&::-webkit-search-cancel-button]:appearance-none [&::-webkit-search-decoration]:appearance-none [&::-webkit-search-results-button]:appearance-none [&::-webkit-search-results-decoration]:appearance-none'
                 />
-              )}
+                {searchIcon && (
+                  <span
+                    dangerouslySetInnerHTML={{
+                      __html:
+                        searchIcon.svg
+                          ?.replace('width="15"', 'width="20"')
+                          ?.replace('height="15"', 'height="20"')
+                          ?.replace('fill="black"', 'fill="currentColor"') ||
+                        '',
+                    }}
+                    className={clsxm(
+                      'pointer-events-none absolute inset-y-0 left-0 flex h-full w-8 items-center justify-center text-slate-400'
+                    )}
+                  />
+                )}
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 
@@ -228,12 +250,13 @@ export default function HomePage() {
   const githubIcon = icons.find((i) => i.name === 'GitHub_Logo');
 
   return (
-    <Layout>
+    <>
       {/* <Seo templateTitle='Home' /> */}
       <Seo />
 
       <main>
-        <section className='bg-white'>
+        <section className='bg-gradient-to-br from-[#bed0f4] via-[#e8f1ff] to-white'>
+          <Navigation />
           <div className='layout h flex min-h-screen flex-col'>
             <h1 className='mt-20 text-5xl'>Simple and Beautiful Icons.</h1>
             <p className='mt-20 text-4xl text-gray-800'>
@@ -373,6 +396,6 @@ export default function HomePage() {
           </div>
         </section>
       </main>
-    </Layout>
+    </>
   );
 }
